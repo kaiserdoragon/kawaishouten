@@ -77,7 +77,6 @@ main {
 //  ヘッダー関連 header
 // ---------------------------------------------
 
-
 .header {
   // .header--inner
   &--logo {
@@ -245,10 +244,45 @@ main {
 // ---------------------------------------------
 
 .footer {
-  // .footer--copy
-  &--copy {
-    padding: 10px;
-    line-height: 1;
+  padding-top: 60px;
+  background: #000080;
+
+  // .footer--logo
+  &--logo {
+    display: block;
+    padding: 25px 0;
+    text-align: center;
+    background: #fff;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+    justify-content: center;
+    padding: 53px 0 82px;
+    border-bottom: 2px solid #fff;
+  }
+
+  li {
+    a {
+      display: block;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    span {
+      display: block;
+      font-size: var(--fz12);
+      text-align: center;
+    }
+  }
+
+  p {
+    padding: 20px 0 30px;
+    font-size: var(--fz14);
+    font-weight: bold;
+    color: #fff;
     text-align: center;
   }
 }

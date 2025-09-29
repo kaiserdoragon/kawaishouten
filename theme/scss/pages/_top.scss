@@ -571,8 +571,9 @@
     gap: 20px;
     align-items: center;
     justify-content: flex-end;
-    width: 67%;
-    font-family: $font-sans;
+    width: 66%;
+    margin-top: 20px;
+    font-family: "Noto Sans JP", sans-serif;
     font-size: var(--fz20);
     font-weight: 500;
     color: #001f63;
@@ -587,6 +588,8 @@
   }
 
   .ttl_sec {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -608,8 +611,10 @@
     -webkit-text-stroke-width: 0.7px;
 
     &:hover {
-      color: #fff;
-      background: $color-blue1;
+      .icon-arrow {
+        color: #fff;
+        background: $color-blue1;
+      }
     }
   }
 
@@ -643,6 +648,7 @@
       margin: 0;
       font-size: 128px;
       font-weight: bold;
+      line-height: 1;
       color: #d9d9d9;
       letter-spacing: 0;
       transform: translateY(2em);
@@ -728,15 +734,6 @@
     }
   }
 
-  .fadein {
-    opacity: 0;
-    transition-duration: 2s;
-
-    &.active {
-      opacity: 1;
-    }
-  }
-
   // .top_business--inner
   &--inner {
     box-sizing: border-box;
@@ -746,6 +743,38 @@
 
     img {
       border-radius: 25px;
+    }
+
+    h3 {
+      margin-bottom: 40px;
+      font-size: var(--fz32);
+      font-weight: bold;
+      line-height: 1.8;
+    }
+
+    p {
+      font-size: var(--fz20);
+      font-weight: 500;
+      line-height: 1.8;
+    }
+  }
+
+  // .top_business--contents
+  &--contents {
+    position: relative;
+    top: -140px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    align-items: flex-end;
+    justify-content: center;
+
+    div {
+      width: 40%;
+    }
+
+    p {
+      padding-right: 50px;
     }
   }
 }
