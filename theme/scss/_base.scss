@@ -17,16 +17,19 @@ body {
   line-height: 1.6;
   color: $color-body;
   letter-spacing: 0.05em;
+
+  // ハンバーガーメニューが開いている時のスクロール防止
+  &.menu-open {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 // font-sizeは下記の用に指定
 // font-size: var(--fz14);
 
 .wrap {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
   // min-width: 1200px;
   margin: auto;
 
@@ -104,6 +107,12 @@ main {
     padding: 23px 50px;
     margin: auto;
     transform: translateX(-50%);
+
+    @include max-mq {
+      position: static;
+      display: block;
+      transform: none;
+    }
   }
 
   // .header--link
@@ -127,7 +136,7 @@ main {
   &--nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 5.208333333333334vw;
+    gap: 5.2083vw;
     align-items: center;
     width: min(990px, 100%);
   }
@@ -149,6 +158,7 @@ main {
   cursor: pointer;
   background: $color-blue1;
   border: solid 2px #fff;
+  border-radius: 4px;
 
   span {
     position: absolute;
@@ -240,6 +250,7 @@ main {
     z-index: 99;
     width: 100%;
     height: 100%;
+    background: rgb(0 31 99 / 95%);
     transition: 0.5s;
 
     &.is-open {
@@ -247,11 +258,44 @@ main {
     }
 
     ul {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 80px 20px 20px;
+    }
+
+    li {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 20px;
     }
 
     a {
       display: block;
+      padding: 15px 20px;
+      font-size: var(--fz18);
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      background: rgb(255 255 255 / 10%);
+      border-radius: 8px;
+      transition: 0.3s;
+
+      &:hover {
+        background: rgb(255 255 255 / 20%);
+        transform: translateY(-2px);
+      }
+    }
+
+    span {
+      display: block;
+      margin-bottom: 5px;
+      font-size: var(--fz12);
+      opacity: 0.8;
     }
   }
 }

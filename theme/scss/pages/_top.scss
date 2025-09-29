@@ -27,11 +27,15 @@
     position: absolute;
     bottom: 40px;
     left: 25px;
-    font-size: var(--fz170);
+    font-size: min(var(--fz170), 8.854166666666668vw);
     line-height: 1.2;
     color: #fff;
     -webkit-text-stroke-width: 10px;
     letter-spacing: 7px;
+  }
+
+  @include max-mq {
+    // 767px以下
   }
 }
 
@@ -175,104 +179,6 @@
     justify-content: flex-end;
   }
 }
-
-.txt_animation_underup {
-  display: flex;
-  overflow: hidden;
-
-  p {
-    margin: 0;
-    font-size: 48px;
-    font-weight: bold;
-    color: #fff;
-    letter-spacing: 0.06em;
-    transform: translateY(2em);
-    animation: textanimation 1s forwards;
-    -webkit-text-stroke-width: 0;
-
-    &:nth-child(1) {
-      animation-delay: 0.2s;
-    }
-
-    &:nth-child(2) {
-      animation-delay: 0.4s;
-    }
-
-    &:nth-child(3) {
-      animation-delay: 0.6s;
-    }
-
-    &:nth-child(4) {
-      animation-delay: 0.8s;
-    }
-
-    &:nth-child(5) {
-      animation-delay: 1s;
-    }
-
-    &:nth-child(6) {
-      animation-delay: 1.2s;
-    }
-  }
-}
-
-@keyframes textanimation {
-  0% {
-    transform: translateY(2em);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-
-.txt_animation_flow {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-
-  p {
-    flex: 0 0 auto;
-    padding-left: 20px;
-    overflow: hidden;
-    font-size: 170px;
-    color: #fff;
-    white-space: nowrap;
-
-    &:nth-child(odd) {
-      // animation: loop 50s -25s linear infinite;
-      animation: loop 70s -35s linear infinite;
-    }
-
-    &:nth-child(even) {
-      // animation: loop 50s -25s linear infinite;
-      animation: loop 70s -35s linear infinite;
-    }
-  }
-}
-
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes loop2 {
-  0% {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-200%);
-  }
-}
-
-
 
 .top_info {
   padding: 25px 0;
@@ -543,15 +449,6 @@
       &:nth-child(9) {
         animation-delay: 1.8s;
       }
-    }
-  }
-
-  .fadein {
-    opacity: 0;
-    transition-duration: 2s;
-
-    &.active {
-      opacity: 1;
     }
   }
 

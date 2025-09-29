@@ -32,12 +32,20 @@ if (Gnav_btn) {
   Gnav_btn.addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("is-open");
     Gnav.classList.toggle("is-open");
+    
+    // メニューが開いている時にbodyにクラスを追加してスクロールを防止
+    if (Gnav.classList.contains("is-open")) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
   });
 
   // メニューのどこかが押されたら閉じる
   Gnav.addEventListener("click", (e) => {
     Gnav_btn.classList.remove("is-open");
     Gnav.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
   });
 }
 

@@ -81,6 +81,6 @@ $tablet-breakpoints: (
 @include max-mq {
   // 767px以下
   .is-hidden_sp {
-    display: none;
+    display: none !important;
   }
 }

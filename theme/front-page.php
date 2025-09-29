@@ -13,6 +13,24 @@
       <div class="txt_animation_flow">
         <p class="loop_text">DRIVEN BY TRUST</p>
         <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
+        <p class="loop_text">DRIVEN BY TRUST</p>
       </div>
     </h2>
     <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv.jpg" alt="" width="1920" height="1025">
@@ -122,28 +140,28 @@
         当社は、東海エリアを中心とした市場配送（定期便）および一般貨物配送（久留米運送等）を基盤に、幅広い物流サービスを展開しています。さらに、関東・関西エリアへの産地便輸送や、地場エリアでの集荷業務にも対応し、地域と広域をつなぐ柔軟な輸送ネットワークを構築しています。取扱品目は、青果物をはじめとする生鮮品や一般貨物まで多岐にわたり、特に鮮度や品質が求められる青果物の輸送においては、確実で迅速な配送体制を整えています。私たちは「安全・安心・確実」をモットーに、物流を通じてお客様の事業活動を支えるとともに、地域社会の発展に貢献してまいります。
       </p>
       <ol>
-        <li class="fadein">
+        <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business01.png" alt="" width="320" height="220" alt="">
           <dl>
             <dt>運行情報システム<br>管理システムの導入</dt>
             <dd>そらEVER「運SOUL」を活用して、車両管理及び乗務員の管理の一元化アプリを利用して車両の運行状況、貨物追跡等 正確且つ安全な運行管理を実施しています。</dd>
           </dl>
         </li>
-        <li class="fadein">
+        <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business02.png" alt="" width="320" height="220" alt="">
           <dl>
             <dt>庫内温度監視</dt>
             <dd>冷凍冷蔵車には、庫内温度監視システム「おんどとり」を装備して生鮮食料品などの輸送の温度管理をしています。</dd>
           </dl>
         </li>
-        <li class="fadein">
+        <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business03.png" alt="" width="320" height="220" alt="">
           <dl>
             <dt>アルコール検査</dt>
             <dd>運転者にアルコールチェッカーを使用し始業前、始業後にアルコール検査を実施しています。</dd>
           </dl>
         </li>
-        <li class="fadein">
+        <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business04.png" alt="" width="320" height="220" alt="">
           <dl>
             <dt>教育プログラム</dt>
