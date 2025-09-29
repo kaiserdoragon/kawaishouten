@@ -99,9 +99,17 @@ function header_style_script()
     wp_register_script('mainscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
     wp_enqueue_script('mainscripts');
 
+    //アニメーション用のjsファイルを読み込み
+    wp_register_script('animationjs', get_template_directory_uri() . '/js/animation.js', array('jquery'));
+    wp_enqueue_script('animationjs');
+
     //swiper用のjsファイルを読み込み
     wp_register_script('slider', get_template_directory_uri() . '/js/slider.js', array('jquery'));
     wp_enqueue_script('slider');
+
+    //検証画面禁止のjsファイルを読み込み
+    // wp_register_script('slider', get_template_directory_uri() . '/js/prohibited.js', array('jquery'));
+    // wp_enqueue_script('slider');
 
     // ページ専用jsの読み込みが必要な時は下記のように使う。
     //    wp_register_script('scriptname', get_template_directory_uri().'/js/scriptname.js', array('jquery'));
@@ -124,7 +132,7 @@ add_action('wp_enqueue_scripts', 'header_style_script');
 //★deferだと動作しない場合は、jquery-coreについてはdeferをやめると良い。
 function add_defer_script($tag, $handle, $url)
 {
-  if ('jquery-migrate' === $handle || 'mainscripts' === $handle || 'slider' === $handle) {
+  if ('jquery-migrate' === $handle || 'mainscripts' === $handle || 'slider' === $handle || 'animationjs' === $handle) {
     $tag = '<script src="' . esc_url($url) . '" defer></script>';
   }
   return $tag;
@@ -233,7 +241,7 @@ remove_filter('the_excerpt', 'wpautop'); // 自動挿入のpタグを抜粋欄�
 function custom_view_more($more)
 {
   global $post;
-  return '... <a class="link_more" href="' . get_permalink($post->ID) . '">' . '続きを読む' . '</a>';
+  return '<a class="link_more" href="' . get_permalink($post->ID) . '">' . '' . '</a>';
 }
 
 add_filter('excerpt_more', 'custom_view_more');

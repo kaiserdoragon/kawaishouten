@@ -13,9 +13,10 @@ body {
   position: relative;
   font-family: $font-sans;
   font-size: var(--fz16);
-  font-weight: 400; // ※游ゴシックのときは500
+  font-weight: 400;
   line-height: 1.6;
   color: $color-body;
+  letter-spacing: 0.05em;
 }
 
 // font-sizeは下記の用に指定
@@ -33,7 +34,7 @@ body {
 
 .container {
   box-sizing: border-box;
-  width: min(1050px, 100%); // デザインの幅 + padding
+  width: min(1630px, 100%); // デザインの幅 + padding
   padding: 0 min(4vw, 25px);
   margin: auto;
 }
@@ -45,20 +46,6 @@ main {
 
   @media (min-width: 768px) and (max-width: 769px) and (orientation: portrait) {
     min-height: 95vh;
-  }
-}
-
-.totop {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  cursor: pointer;
-
-  // display: none; fadeInを利用するときに必要
-
-  @include max-mq {
-    width: 44px;
-    height: 44px;
   }
 }
 
@@ -90,6 +77,60 @@ main {
 //  ヘッダー関連 header
 // ---------------------------------------------
 
+
+.header {
+  // .header--inner
+  &--logo {
+    a {
+      display: block;
+    }
+  }
+
+  // .header--inner
+  &--inner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 111111;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1850px, 100%);
+    padding: 23px 50px;
+    margin: auto;
+    transform: translateX(-50%);
+  }
+
+  // .header--link
+  &--link {
+    box-sizing: border-box;
+    width: 233px;
+    padding: 5px 35px 5px 0 !important;
+    font-weight: bold;
+    color: #000080 !important;
+    text-align: center;
+    background: url(../img/common/search.svg) no-repeat right 13% center / 19%, #fff;
+    border-radius: 1000px;
+
+    span {
+      display: block;
+      font-weight: bold;
+    }
+  }
+
+  // .header--nav
+  &--nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5.208333333333334vw;
+    align-items: center;
+    width: min(990px, 100%);
+  }
+}
+
+
 // ---------------------------------------------
 //  グローバルナビゲーション関連 gnav
 // ---------------------------------------------
@@ -103,7 +144,7 @@ main {
   width: 44px;
   height: 44px;
   cursor: pointer;
-  background: $color-primary;
+  background: $color-blue1;
   border: solid 2px #fff;
 
   span {
@@ -161,12 +202,19 @@ main {
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 34px;
   }
 
   a {
     display: block;
-    padding: 15px 0;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  span {
+    display: block;
+    font-size: var(--fz12);
+    text-align: center;
   }
 
   @include max-mq {
