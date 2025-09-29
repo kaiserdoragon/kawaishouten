@@ -108,8 +108,8 @@ function header_style_script()
     wp_enqueue_script('slider');
 
     //検証画面禁止のjsファイルを読み込み
-    // wp_register_script('slider', get_template_directory_uri() . '/js/prohibited.js', array('jquery'));
-    // wp_enqueue_script('slider');
+    // wp_register_script('prohibited', get_template_directory_uri() . '/js/prohibited.js', array('jquery'));
+    // wp_enqueue_script('prohibited');
 
     // ページ専用jsの読み込みが必要な時は下記のように使う。
     //    wp_register_script('scriptname', get_template_directory_uri().'/js/scriptname.js', array('jquery'));
@@ -249,7 +249,7 @@ add_filter('excerpt_more', 'custom_view_more');
 // 抜粋文字数設定（不具合時は WP Multibyte Patch プラグインを入れる）
 function custom_excerpt_length($length)
 {
-  return 20; //単語数：日本語の場合は2倍の文字数
+  return 40; //単語数：日本語の場合は2倍の文字数
 }
 
 add_filter('excerpt_length', 'custom_excerpt_length', 999);

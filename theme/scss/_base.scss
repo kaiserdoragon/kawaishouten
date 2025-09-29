@@ -23,6 +23,10 @@ body {
 // font-size: var(--fz14);
 
 .wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   // min-width: 1200px;
   margin: auto;
 
@@ -87,7 +91,7 @@ main {
 
   // .header--inner
   &--inner {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 50%;
     z-index: 111111;
@@ -199,9 +203,22 @@ main {
   display: block;
 
   ul {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 34px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -2.5vw;
+      display: inline-block;
+      width: 3px;
+      height: 100%;
+      content: "";
+      background: #fff;
+      transform: translateY(-50%);
+    }
   }
 
   a {
@@ -245,6 +262,7 @@ main {
 
 .footer {
   padding-top: 60px;
+  margin-top: auto;
   background: #000080;
 
   // .footer--logo

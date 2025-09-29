@@ -46,7 +46,7 @@
 		<header class="header">
 			<div class="header--inner">
 				<h1 class="header--logo">
-					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/common/header_logo.svg" alt="株式会社河合商店" width="214" height="51"></a>
+					<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/common/header_logo.svg" alt="株式会社河合商店" width="214" height="51"></a>
 				</h1>
 				<button id="js-gnav_btn" class="gnav_btn">
 					<span></span>
@@ -76,7 +76,7 @@
 							</li>
 						</ul>
 					</nav>
-					<a class="header--link is-hidden_sp" href="<?php echo esc_url(home_url('/news')); ?>"><span>contact</span>各種お問い合わせ</a>
+					<a class="header--link is-hidden_sp" href="<?php echo esc_url(home_url('/contact')); ?>"><span>contact</span>各種お問い合わせ</a>
 				</div>
 			</div>
 		</header>
