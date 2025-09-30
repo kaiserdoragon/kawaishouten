@@ -42,6 +42,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  // 監視対象をすべて取得
+  const targets = document.querySelectorAll('.js_target_lower');
+
+  if (targets.length === 0) {
+    return;
+  }
+
+  // Intersection Observer のオプション
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1 // 要素が10%表示されたらトリガー
+  };
+
+  // コールバック関数
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      // isIntersectingプロパティで交差しているか判定
+      if (entry.isIntersecting) {
+        // 'txt_animation_underup' クラスを付与
+        entry.target.classList.add('txt_animation_underup_lower');
+        // 一度クラスを付与したら、この要素の監視を停止
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  // Observer を作成
+  const observer = new IntersectionObserver(callback, options);
+
+  // すべての対象要素を監視開始
+  targets.forEach(el => observer.observe(el));
+});
+
+
+
+
 
 
 // 左から順番にフェードで出現していく

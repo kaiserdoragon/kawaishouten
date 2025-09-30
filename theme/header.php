@@ -71,9 +71,9 @@
 							<li <?php if (is_archive()): ?> class="is_current" <?php endif; ?>>
 								<a href="<?php echo esc_url(home_url('/news')); ?>"><span>News</span>お知らせ</a>
 							</li>
-							<!-- <li class="is-hidden_pc">
+							<li class="is-hidden_pc">
 								<a class="header--link" href="<?php echo esc_url(home_url('/contact')); ?>"><span>contact</span>各種お問い合わせ</a>
-							</li> -->
+							</li>
 						</ul>
 					</nav>
 					<a class="header--link is-hidden_sp" href="<?php echo esc_url(home_url('/contact')); ?>"><span>contact</span>各種お問い合わせ</a>
