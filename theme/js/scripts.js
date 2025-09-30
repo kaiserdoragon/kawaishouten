@@ -28,24 +28,67 @@ if (Header) {
 // グローバルナビゲーション //////////////////////////////////////////////////////
 const Gnav_btn = document.getElementById("js-gnav_btn");
 const Gnav = document.getElementById("js-gnav");
-if (Gnav_btn) {
-  Gnav_btn.addEventListener("click", (e) => {
-    e.currentTarget.classList.toggle("is-open");
-    Gnav.classList.toggle("is-open");
-    
-    // メニューが開いている時にbodyにクラスを追加してスクロールを防止
-    if (Gnav.classList.contains("is-open")) {
-      document.body.classList.add("menu-open");
-    } else {
-      document.body.classList.remove("menu-open");
-    }
-  });
 
-  // メニューのどこかが押されたら閉じる
-  Gnav.addEventListener("click", (e) => {
+// スクロール位置を保存する変数
+let scrollPosition = 0;
+
+if (Gnav_btn) {
+  // iOS Safari対応: touchstartイベントも追加
+  const handleMenuToggle = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const isOpen = Gnav.classList.contains("is-open");
+    
+    if (!isOpen) {
+      // メニューを開く
+      scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.classList.add("menu-open");
+      Gnav_btn.classList.add("is-open");
+      Gnav.classList.add("is-open");
+    } else {
+      // メニューを閉じる
+      closeMenu();
+    }
+  };
+
+  // メニューを閉じる関数
+  const closeMenu = () => {
     Gnav_btn.classList.remove("is-open");
     Gnav.classList.remove("is-open");
     document.body.classList.remove("menu-open");
+    document.body.style.top = "";
+    window.scrollTo(0, scrollPosition);
+    scrollPosition = 0;
+  };
+
+  // クリックとタッチイベントの両方に対応
+  Gnav_btn.addEventListener("click", handleMenuToggle);
+  Gnav_btn.addEventListener("touchstart", handleMenuToggle, { passive: false });
+
+  // メニューのどこかが押されたら閉じる
+  Gnav.addEventListener("click", (e) => {
+    // メニュー自体のクリックは無視（子要素のクリックのみ処理）
+    if (e.target === Gnav) {
+      closeMenu();
+    }
+  });
+
+  // メニュー外をクリックしたら閉じる
+  document.addEventListener("click", (e) => {
+    if (Gnav.classList.contains("is-open") && 
+        !Gnav.contains(e.target) && 
+        !Gnav_btn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // ESCキーでメニューを閉じる
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && Gnav.classList.contains("is-open")) {
+      closeMenu();
+    }
   });
 }
 
