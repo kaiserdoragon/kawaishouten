@@ -108,8 +108,8 @@ function header_style_script()
     wp_enqueue_script('slider');
 
     //検証画面禁止のjsファイルを読み込み
-    // wp_register_script('prohibited', get_template_directory_uri() . '/js/prohibited.js', array('jquery'));
-    // wp_enqueue_script('prohibited');
+    wp_register_script('prohibited', get_template_directory_uri() . '/js/prohibited.js', array('jquery'));
+    wp_enqueue_script('prohibited');
 
     // ページ専用jsの読み込みが必要な時は下記のように使う。
     //    wp_register_script('scriptname', get_template_directory_uri().'/js/scriptname.js', array('jquery'));
