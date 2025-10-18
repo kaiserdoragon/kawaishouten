@@ -1,7 +1,9 @@
 <footer class="footer">
-    <a href="<?php echo esc_url(home_url('/')); ?>" class="footer--logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/common/footer_logo.svg" alt="株式会社河合商店" width="253" height="61">
-    </a>
+    <p class="footer--logo">
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/common/footer_logo.svg" alt="株式会社河合商店" width="253" height="61">
+        </a>
+    </p>
     <ul>
         <li>
             <a href="<?php echo esc_url(home_url('/')); ?>"><span>HOME</span>ホーム</a>
@@ -19,7 +21,7 @@
             <a href="<?php echo esc_url(home_url('/news')); ?>"><span>News</span>お知らせ</a>
         </li>
     </ul>
-    <p><small>http//yexttexttttexxxt.@text</small></p>
+    <small>http//yexttexttttexxxt.@text</small>
 </footer>
 </div>
 <?php wp_footer(); ?>

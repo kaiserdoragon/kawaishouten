@@ -27,10 +27,11 @@
     position: absolute;
     bottom: 40px;
     left: 25px;
-    font-size: min(var(--fz170), 8.854166666666668vw);
+
+    // font-size: 8.854166666666668vw;
     line-height: 1.2;
     color: #fff;
-    -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-width: 5px;
     letter-spacing: 7px;
   }
 
@@ -101,7 +102,7 @@
   strong {
     display: block;
     margin-bottom: 32px;
-    font-size: var(--fz32);
+    font-size: 32px;
     font-weight: bold;
   }
 
@@ -110,7 +111,6 @@
   }
 
   .ttl_sec {
-    font-size: 96px;
     color: $color-blue1;
     letter-spacing: 4px;
     -webkit-text-stroke-width: 5px;
@@ -125,7 +125,7 @@
 
     p {
       margin: 0;
-      font-size: var(--fz96);
+      font-size: 96px;
       font-weight: bold;
       color: $color-blue1;
       letter-spacing: 0;
@@ -467,7 +467,7 @@
 
     p {
       margin: 0;
-      font-size: var(--fz96);
+      font-size: 5vw;
       font-weight: bold;
       color: $color-blue1;
       letter-spacing: 0;
@@ -734,7 +734,6 @@
     }
   }
 
-
   .txt_animation_underup_lower {
     display: flex;
     flex-wrap: wrap;
@@ -861,7 +860,7 @@
     justify-content: center;
 
     div {
-      width: 40%;
+      width: 800px;
     }
 
     img {
@@ -908,45 +907,16 @@
 
       img {
         width: auto;
-        height: 35px;
+        height: 10vw;
         object-fit: contain;
       }
     }
 
     .txt_animation_underup_lower {
       p {
-        font-size: min(45px, 12vw);
+        font-size: 12.5vw;
         -webkit-text-stroke-width: 3px;
       }
     }
   }
-}
-
-
-
-
-
-
-
-/* 見やすくするためのcss 不要のためコピーしなくてOK */
-.swiper {
-  max-width: 300px;
-  height: 300px;
-  margin-inline: auto;
-}
-
-.swiper-slide {
-  line-height: 300px;
-  text-align: center;
-  background: red;
-}
-
-.swiper-slide:nth-child(2) {
-  color: #fff;
-  background: blue;
-}
-
-.swiper-slide:nth-child(3) {
-  color: #fff;
-  background: green;
 }

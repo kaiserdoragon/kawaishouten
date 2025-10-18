@@ -83,7 +83,7 @@ table {
 
   p {
     margin: 0;
-    font-size: min(48px, 2.5vw);
+    font-size: 2.5vw;
     font-weight: bold;
     color: #fff;
     letter-spacing: 0.06em;
@@ -134,16 +134,13 @@ table {
   }
 }
 
-
-
-
 .txt_animation_underup_lower {
   display: flex;
   overflow: hidden;
 
   p {
     margin: 0;
-    font-size: min(48px, 2.5vw);
+    font-size: 2.5vw;
     font-weight: bold;
     color: #fff;
     letter-spacing: 0.06em;
@@ -202,7 +199,7 @@ table {
   p {
     flex: 0 0 auto;
     padding-left: 20px;
-    font-size: 170px;
+    font-size: 8.854166666666668vw;
     color: #fff;
     white-space: nowrap;
     animation: loop 40s linear infinite;
@@ -312,36 +309,5 @@ table {
 
   &:empty {
     display: none;
-  }
-}
-
-// タブ切り替え
-.tab_select {
-  // .tab_select--nav
-  &--nav {
-    display: flex;
-  }
-
-  // .tab_select--tab_wrap
-  &--tab_wrap {
-    position: relative;
-  }
-
-  // .tab_select--tab
-  &--tab {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
-
-    &.is-show {
-      position: relative;
-      pointer-events: fill;
-      visibility: visible;
-      opacity: 1;
-      transition: 0.8s;
-    }
   }
 }

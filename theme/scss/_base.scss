@@ -119,8 +119,9 @@ main {
   // .header--link
   &--link {
     box-sizing: border-box;
-    width: 233px;
-    padding: 5px 35px 5px 0 !important;
+    width: 12.239583333333332vw;
+    padding: 0.2604166667vw 1.8229166667vw 0.2604166667vw 0 !important;
+    font-size: 0.8333333333vw;
     font-weight: bold;
     color: #000080 !important;
     text-align: center;
@@ -129,6 +130,7 @@ main {
 
     span {
       display: block;
+      font-size: 0.625vw;
       font-weight: bold;
     }
 
@@ -141,9 +143,9 @@ main {
   &--nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 5.2083vw;
+    gap: 5.208333333333334vw;
     align-items: center;
-    width: min(990px, 100%);
+    width: fit-content;
   }
 }
 
@@ -221,7 +223,8 @@ main {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 34px;
+    gap: 1.7708333333333333vw;
+    font-size: 0.8333333333333334vw;
 
     &::after {
       position: absolute;
@@ -244,7 +247,7 @@ main {
 
   span {
     display: block;
-    font-size: var(--fz12);
+    font-size: 0.625vw;
     text-align: center;
   }
 
@@ -300,24 +303,17 @@ main {
 // ---------------------------------------------
 
 .footer {
+  position: relative;
   padding-top: 60px;
   margin-top: auto;
   background: #000080;
-
-  // .footer--logo
-  &--logo {
-    display: block;
-    padding: 25px 0;
-    text-align: center;
-    background: #fff;
-  }
 
   ul {
     display: flex;
     flex-wrap: wrap;
     gap: 34px;
     justify-content: center;
-    padding: 53px min(4vw, 25px) 82px;
+    padding: 60px min(4vw, 25px) 60px;
     border-bottom: 2px solid #fff;
   }
 
@@ -335,7 +331,8 @@ main {
     }
   }
 
-  p {
+  small {
+    display: block;
     padding: 20px 0 30px;
     font-size: var(--fz14);
     font-weight: bold;
@@ -343,9 +340,99 @@ main {
     text-align: center;
   }
 
+  &::before {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background: #000080;
+    transform: translateX(-50%);
+  }
+
+  // .footer--logo
+  &--logo {
+    text-align: center;
+    background: #fff;
+
+    a {
+      display: block;
+      width: fit-content;
+      padding: 25px 0;
+      margin: auto;
+    }
+  }
+
   @include max-mq {
     ul {
       padding: 50px 0;
     }
+  }
+}
+
+// ---------------------------------------------
+//  アイキャッチ
+// ---------------------------------------------
+
+.eyecatch {
+  position: relative;
+
+  &.-news {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    div {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      width: 100%;
+      max-width: 1850px;
+      margin: auto;
+      font-family: $font-hiragino;
+      color: #fff;
+      transform: translateX(-50%);
+
+      h2 {
+        margin-left: 10px;
+        font-size: var(--fz48);
+      }
+
+      span {
+        font-size: var(--fz170);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        -webkit-text-stroke-width: 5px;
+      }
+    }
+  }
+}
+
+.page_ttl {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  width: 100%;
+  max-width: 1850px;
+  margin: auto;
+  font-family: $font-hiragino;
+  color: #fff;
+  transform: translateX(-50%);
+
+  h2 {
+    margin-left: 10px;
+    font-size: var(--fz48);
+  }
+
+  span {
+    font-size: var(--fz170);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    -webkit-text-stroke-width: 5px;
   }
 }
