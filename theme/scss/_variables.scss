@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @use "sass:map"; // 追加
+@use "sass:math";
+@use "sass:meta";
+@use "sass:list";
+
 
 // ---------------------------------------------
 // ここから変数
@@ -26,6 +30,7 @@ $font-hiragino: hiragino-kaku-gothic-pron, sans-serif;
     --fz#{$var}: min(calc(0.1rem * #{$var}), calc(0.1vw * #{$var} * var(--invariants)));
   }
 }
+
 
 // ---------------------------------------------
 // ここまで
