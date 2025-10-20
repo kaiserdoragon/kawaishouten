@@ -313,24 +313,29 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    gap: 7.5520833333vw;
+    gap: 7.708333333333334vw;
     align-items: center;
-    justify-content: center;
-    width: min(1550px, 100%);
-    padding: 1.5625vw 4.6875vw;
+    width: 82.0833333333vw;
+    padding: 1.4583333333vw 0 1.4583333333vw 4.53125vw;
     margin: auto;
     background: #fff;
     border-radius: 30px;
 
     img {
-      width: 170px;
-      height: 170px;
+      width: 8.854166666666668vw;
+      height: 8.854166666666668vw;
       object-fit: contain;
       background: #e4e8ef;
     }
 
     @include tb-mq {
+      flex-direction: column;
       gap: 6vw;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     @include max-mq {
@@ -342,9 +347,14 @@
   &--contents {
     display: flex;
     flex-wrap: wrap;
-    gap: min(58px, 3.0208333333333335vw);
+    gap: 3.0208333333333335vw;
     align-items: center;
-    justify-content: center;
+    width: 44.79166666666667vw;
+
+    @include tb-mq {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   //.top_info--list
@@ -404,13 +414,13 @@
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
-    width: min(1585px, 100%);
+    width: px-to-vw(1600px);
     margin: auto;
   }
 
   li {
     box-sizing: border-box;
-    width: 20.3125vw;
+    width: px-to-vw(395px);
     padding: 33px 33px 30px;
     background: #f4f6f7;
     border-radius: 40px;
@@ -527,7 +537,7 @@
 
   // .top_business--txt
   &--txt {
-    width: 49.270833333333336vw;
+    width: px-to-vw(950px);
     margin: 0 auto 70px;
     line-height: 1.8;
 
@@ -539,6 +549,7 @@
   @include tb-mq {
     ol {
       gap: 20px;
+      width: 100%;
     }
 
     li {
@@ -908,6 +919,16 @@
     }
   }
 
+  @include tb-mq {
+    .txt_animation_underup {
+      img {
+        width: auto;
+        height: 10.8vw;
+        object-fit: contain;
+      }
+    }
+  }
+
   @include max-mq {
     padding: 100px 0 50px;
 
@@ -915,12 +936,6 @@
       p {
         font-size: 22vw;
         line-height: 1.1;
-      }
-
-      img {
-        width: auto;
-        height: 10.8vw;
-        object-fit: contain;
       }
     }
 

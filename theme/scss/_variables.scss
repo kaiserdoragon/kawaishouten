@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@use "sass:map"; // 追加
+@use "sass:map";
 @use "sass:math";
 @use "sass:meta";
 @use "sass:list";
@@ -19,6 +19,7 @@ $color-accent: #000080;
 $font-sans: "Noto Sans JP", sans-serif;
 $font-hiragino: hiragino-kaku-gothic-pron, sans-serif;
 
+
 // font-size
 :root {
   --invariants: 2.5; //初期値2.5
@@ -27,6 +28,58 @@ $font-hiragino: hiragino-kaku-gothic-pron, sans-serif;
     --fz#{$var}: min(calc(0.1rem * #{$var}), calc(0.1vw * #{$var} * var(--invariants)));
   }
 }
+
+
+
+
+// ---------------------------------------------
+// pxからvwに変換
+// ---------------------------------------------
+
+$vw-base: 1920px !default;
+
+/// px を vw に変換する関数。
+/// @param {number} $px   - px 長さ（0 は可）
+/// @param {number} $base - 基準幅（px）。省略時は $vw-base。
+/// @return {number} - vw 長さ
+@function px-to-vw($px, $base: $vw-base) {
+  // $base の妥当性チェック
+  @if not math.compatible($base, 1px) {
+    @error "px-to-vw: $base must be a pixel length (e.g. 1920px).";
+  }
+
+  @if $base <= 0 {
+    @error "px-to-vw: $base must be greater than 0.";
+  }
+
+  // 0 は単位付きで返す（型を一定に）
+  @if $px == 0 {
+    @return 0;
+  }
+
+  // $px は px 長さであること
+  @if not math.compatible($px, 1px) {
+    @error "px-to-vw: $px must be a pixel length (e.g. 16px).";
+  }
+
+  // (px/px) → 比率 × 100vw
+  @return math.div($px, $base) * 100vw;
+}
+
+/// 任意の CSS プロパティに vw を適用するミックスイン。
+/// @example
+/// .title { @include vw(font-size, 20px); }
+@mixin vw($property, $px, $base: $vw-base) {
+  #{$property}: px-to-vw($px, $base);
+}
+
+/* そのまま使う（デフォルト基準幅 1440px） */
+// .test {
+//   padding-left: px-to-vw(24px);
+//   font-size: px-to-vw(20px);
+// }
+
+
 
 
 // ---------------------------------------------

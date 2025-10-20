@@ -40,10 +40,15 @@ body {
 
 .container {
   box-sizing: border-box;
-  width: min(1630px, 100%); // デザインの幅 + padding
+  width: px-to-vw(1650px);
   padding: 0 min(4vw, 25px);
   margin: auto;
 }
+
+// .test {
+//   padding-left: px-to-vw(24px);
+//   font-size: px-to-vw(20px);
+// }
 
 main {
   display: block;
@@ -118,13 +123,14 @@ main {
   // .header--link
   &--link {
     box-sizing: border-box;
-    width: 12.239583333333332vw;
-    padding: 0.2604166667vw 1.8229166667vw 0.2604166667vw 0 !important;
+    width: 12.2395833333vw;
+    padding: 0.5208333333333333vw 0;
     font-size: 0.8333333333vw;
     font-weight: bold;
-    color: #000080 !important;
+    line-height: 1.2;
+    color: $color-blue2 !important;
     text-align: center;
-    background: url(../img/common/search.svg) no-repeat right 13% center / 19%, #fff;
+    background: url(../img/common/search.svg) no-repeat right 10% center / 1.5104166666666667vw, 1.8229166666666667vw, #fff;
     border-radius: 1000px;
 
     span {
