@@ -93,7 +93,7 @@ main {
 // ---------------------------------------------
 
 .header {
-  // .header--inner
+  // .header--logo
   &--logo {
     a {
       display: block;
@@ -116,7 +116,12 @@ main {
     margin: auto;
     transform: translateX(-50%);
 
-    @include max-mq {
+    @media (width <= 1450px) {
+      gap: 30px;
+      justify-content: center;
+    }
+
+    @media (width <= 1024px) {
       position: static;
       display: block;
       padding: 15px 10px;
@@ -127,19 +132,18 @@ main {
   // .header--link
   &--link {
     box-sizing: border-box;
-    width: 12.2395833333vw;
-    padding: 0.5208333333333333vw 0;
-    font-size: 0.8333333333vw;
+    width: min(235px, 100%);
+    padding: 10px;
     font-weight: bold;
     line-height: 1.2;
-    color: $color-blue2 !important;
+    color: #000080 !important;
     text-align: center;
-    background: url(../img/common/search.svg) no-repeat right 10% center / 1.5104166666666667vw, 1.8229166666666667vw, #fff;
+    background: url(../img/common/search.svg) no-repeat right 10% center / 29px, 24px, #fff;
     border-radius: 1000px;
 
     span {
       display: block;
-      font-size: 0.625vw;
+      font-size: var(--fz12);
       font-weight: bold;
     }
 
@@ -155,9 +159,14 @@ main {
   &--nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 5.208333333333334vw;
+    gap: 100px;
     align-items: center;
-    width: fit-content;
+    width: min(995px, 100%);
+    letter-spacing: 0.05em;
+
+    @media (width <= 1450px) {
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -171,7 +180,7 @@ main {
   top: 10px;
   right: 10px;
   z-index: 100;
-  display: block;
+  display: none; // PC時非表示
   width: 44px;
   height: 44px;
   cursor: pointer;
@@ -223,8 +232,8 @@ main {
     }
   }
 
-  @include min-mq {
-    display: none; // PC時非表示
+  @media (width <= 1024px) {
+    display: block; // PC時表示
   }
 }
 
@@ -235,13 +244,12 @@ main {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.7708333333333333vw;
-    font-size: 0.8333333333333334vw;
+    gap: 40px;
 
     &::after {
       position: absolute;
       top: 50%;
-      right: -2.5vw;
+      right: -54px;
       display: inline-block;
       width: 3px;
       height: 100%;
@@ -259,11 +267,17 @@ main {
 
   span {
     display: block;
-    font-size: 0.625vw;
+    font-size: var(--fz12);
     text-align: center;
   }
 
-  @include max-mq {
+  +.header--link {
+    @media (width <= 1024px) {
+      display: none;
+    }
+  }
+
+  @media (width <= 1024px) {
     position: fixed;
     top: 0;
     right: -110%;

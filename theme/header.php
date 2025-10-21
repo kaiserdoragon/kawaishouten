@@ -79,7 +79,7 @@
 							</li>
 						</ul>
 					</nav>
-					<a class="header--link is-hidden_sp" href="<?php echo esc_url(home_url('/contact')); ?>"><span>contact</span>各種お問い合わせ</a>
+					<a class="header--link" href="<?php echo esc_url(home_url('/contact')); ?>"><span>contact</span>各種お問い合わせ</a>
 				</div>
 			</div>
 		</header>

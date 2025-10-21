@@ -112,7 +112,7 @@
                 </p>
               </a>
             <?php endforeach; ?>
-            <?php wp_reset_postdata(); // ← これが重要！ 
+            <?php wp_reset_postdata(); // ← これが重要！
             ?>
           <?php endif; ?>
         </div>
