@@ -43,6 +43,10 @@ body {
   width: px-to-vw(1650px);
   padding: 0 min(4vw, 25px);
   margin: auto;
+
+  @include max-mq {
+    width: 100%;
+  }
 }
 
 // .test {
@@ -140,7 +144,10 @@ main {
     }
 
     @include max-mq {
+      width: fit-content;
+      padding: 10px 50px;
       margin: auto;
+      background: url(../img/common/search.svg) no-repeat right 8% center / 15%, #fff;
     }
   }
 

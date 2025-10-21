@@ -53,7 +53,7 @@
               <p>.</p>
             </div>
           </h2>
-          <strong>個性や強みを尊重し、<br>助け合いとチームワークで未来を築く</strong>
+          <strong>個性や強みを尊重し、<br class="is-hidden_sp">助け合いとチームワークで未来を築く</strong>
           <p>
             私たちの原動力は「人」です。 <br>
             地域に根ざした物流サービスを通じて、人々の暮らしと産業を支える存在でありたいと考えています。<br>
@@ -96,20 +96,26 @@
           <?php else: ?>
           <?php endif; ?>
         </div>
-        <dl class="top_info--list">
-          <?php foreach ($my_posts as $post): setup_postdata($post); ?>
-            <dt>
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </dt>
-            <dd class="top_info--time">
-              <span class="top_info--time">
-                <?php the_time('Y年m月d日'); ?>
-              </span>
-            </dd>
-            <dd class="top_info--txt"><?php echo get_the_excerpt(); ?></dd>
-          <?php endforeach; ?>
-        </dl>
-        <?php wp_reset_postdata(); ?>
+        <div class="top_info--list">
+          <?php
+          if (!empty($my_posts)) :
+            foreach ($my_posts as $post): setup_postdata($post); ?>
+              <a href="<?php the_permalink(); ?>">
+                <h3>
+                  <?php the_title(); ?>
+                </h3>
+                <span class="top_info--time">
+                  <?php the_time('Y年m月d日'); ?>
+                </span>
+                <p class="top_info--txt">
+                  <?php echo strip_tags(get_the_excerpt()); ?>
+                </p>
+              </a>
+            <?php endforeach; ?>
+            <?php wp_reset_postdata(); // ← これが重要！ 
+            ?>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
   </section>
