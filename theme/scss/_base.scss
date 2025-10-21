@@ -40,7 +40,7 @@ body {
 
 .container {
   box-sizing: border-box;
-  width: px-to-vw(1650px);
+  width: min(1650px, 100%); // デザインの幅 + padding
   padding: 0 min(4vw, 25px);
   margin: auto;
 

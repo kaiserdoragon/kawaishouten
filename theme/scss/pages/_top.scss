@@ -175,16 +175,12 @@
   &--inner {
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: wrap;
     gap: min(180px, 9.375vw);
     align-items: center;
     justify-content: center;
 
     img {
-      width: min(547px, 100%);
-      height: 456px;
-      object-fit: cover;
-      aspect-ratio: 450/ 456;
+      width: 34%;
     }
 
     @include max-mq {
