@@ -75,11 +75,11 @@
 								<a href="<?php echo esc_url(home_url('/news')); ?>"><span>News</span>お知らせ</a>
 							</li>
 							<li class="is-hidden_pc">
-								<a class="header--link" href="<?php echo esc_url(home_url('/contact')); ?>"><span>contact</span>各種お問い合わせ</a>
+								<a class="header--link" href="<?php echo esc_url(home_url('/contact')); ?>"><span>Contact</span>各種お問い合わせ</a>
 							</li>
 						</ul>
 					</nav>
-					<a class="header--link" href="<?php echo esc_url(home_url('/contact')); ?>"><span>contact</span>各種お問い合わせ</a>
+					<a class="header--link" href="<?php echo esc_url(home_url('/contact')); ?>"><span>Contact</span>各種お問い合わせ</a>
 				</div>
 			</div>
 		</header>

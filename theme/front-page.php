@@ -79,7 +79,7 @@
       <h2 class="top_info--ttl">
         <span>お知らせ</span>
         NEWS.
-        <a href="#">MORE</a>
+        <a href="<?php echo esc_url(home_url('/news')); ?>">MORE</a>
       </h2>
       <div class="top_info--contents">
         <?php
