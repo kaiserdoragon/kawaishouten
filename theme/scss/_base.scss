@@ -165,7 +165,9 @@ main {
     letter-spacing: 0.05em;
 
     @media (width <= 1450px) {
+      gap: 40px;
       justify-content: flex-end;
+      width: min(865px, 100%);
     }
   }
 }
@@ -277,7 +279,17 @@ main {
     }
   }
 
-  @media (width <= 1024px) {
+  @media (width <= 1450px) {
+    ul {
+      gap: 30px;
+
+      &::after {
+        right: -54px;
+      }
+    }
+  }
+
+  @include tb-mq {
     position: fixed;
     top: 0;
     right: -110%;
@@ -300,19 +312,23 @@ main {
       width: 100%;
       height: 100%;
       padding: 100px 20px 20px;
+
+      &::after {
+        display: none;
+      }
     }
 
     li {
-      width: 100%;
       margin-bottom: 30px;
+
+      &:last-child {
+        width: 100%;
+      }
     }
 
     a {
-      display: block;
+      margin: auto;
       font-size: var(--fz18);
-      font-weight: bold;
-      color: #fff;
-      text-align: center;
     }
 
     span {

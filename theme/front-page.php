@@ -53,7 +53,7 @@
               <p>.</p>
             </div>
           </h2>
-          <strong>個性や強みを尊重し、<br class="is-hidden_sp">助け合いとチームワークで未来を築く</strong>
+          <strong>個性や強みを尊重し、<br>助け合いとチームワークで未来を築く</strong>
           <p>
             私たちの原動力は「人」です。 <br>
             地域に根ざした物流サービスを通じて、人々の暮らしと産業を支える存在でありたいと考えています。<br>
@@ -187,82 +187,39 @@
   <section class="top_company">
     <div class="top_company--inner">
       <h2 class="ttl_sec">
-        <?php if (wp_is_mobile()) : ?>
-
-          <?php // スマートフォン（SP）向けの表示
-          ?>
-          <div class="js_target">
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_c.svg" alt="C" width="116" height="130">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_o.svg" alt="O" width="121" height="130">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_m.svg" alt="M" width="135" height="124">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_p.svg" alt="P" width="100" height="125">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_a.svg" alt="A" width="128" height="125">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_n.svg" alt="N" width="112" height="125">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_y.svg" alt="Y" width="123" height="125">
-            </p>
-          </div>
-          <div class="js_target_lower">
-            <p>O</p>
-            <p>v</p>
-            <p>e</p>
-            <p>r</p>
-            <p>V</p>
-            <p>i</p>
-            <p>e</p>
-            <p>w</p>
-            <p>.</p>
-          </div>
-        <?php else : ?>
-
-          <?php // PC向けの表示（元のコード） 
-          ?>
-          <div class="js_target ">
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_c.svg" alt="C" width="116" height="130">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_o.svg" alt="O" width="121" height="130">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_m.svg" alt="M" width="135" height="124">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_p.svg" alt="P" width="100" height="125">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_a.svg" alt="A" width="128" height="125">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_n.svg" alt="N" width="112" height="125">
-            </p>
-            <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_y.svg" alt="Y" width="123" height="125">
-            </p>
-            <p>O</p>
-            <p>v</p>
-            <p>e</p>
-            <p>r</p>
-            <p>V</p>
-            <p>i</p>
-            <p>e</p>
-            <p>w</p>
-            <p>.</p>
-          </div>
-          <span>企業紹介</span>
-        <?php endif; ?>
+        <div class="js_target ">
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_c.svg" alt="C" width="116" height="130">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_o.svg" alt="O" width="121" height="130">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_m.svg" alt="M" width="135" height="124">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_p.svg" alt="P" width="100" height="125">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_a.svg" alt="A" width="128" height="125">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_n.svg" alt="N" width="112" height="125">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_y.svg" alt="Y" width="123" height="125">
+          </p>
+          <p>O</p>
+          <p>v</p>
+          <p>e</p>
+          <p>r</p>
+          <p>V</p>
+          <p>i</p>
+          <p>e</p>
+          <p>w</p>
+          <p>.</p>
+        </div>
+        <span>企業紹介</span>
       </h2>
       <div class="top_company--contents">
         <img src="<?php echo get_template_directory_uri(); ?>/img/top/company.jpg" alt="株式会社河合商店" width="919" height="670">
