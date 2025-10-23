@@ -119,6 +119,7 @@ main {
     @media (width <= 1450px) {
       gap: 30px;
       justify-content: center;
+      padding: 25px 10px;
     }
 
     @media (width <= 1024px) {
@@ -147,9 +148,16 @@ main {
       font-weight: bold;
     }
 
-    @include max-mq {
+    @media (width <= 1280px) {
+      width: min(200px, 100%);
+    }
+
+    @include tb-mq {
       width: fit-content;
       padding: 10px 50px;
+    }
+
+    @include max-mq {
       margin: auto;
       background: url(../img/common/search.svg) no-repeat right 8% center / 15%, #fff;
     }
@@ -168,6 +176,11 @@ main {
       gap: 40px;
       justify-content: flex-end;
       width: min(865px, 100%);
+    }
+
+    @media (width <= 1280px) {
+      gap: 30px;
+      width: min(760px, 100%);
     }
   }
 }
@@ -284,7 +297,15 @@ main {
       gap: 30px;
 
       &::after {
-        right: -54px;
+        right: -20px;
+      }
+    }
+  }
+
+  @media (width <= 1280px) {
+    ul {
+      &::after {
+        right: -17px;
       }
     }
   }
@@ -421,6 +442,10 @@ main {
 .eyecatch {
   position: relative;
 
+  img {
+    height: 400px;
+  }
+
   &.-news {
     img {
       width: 100%;
@@ -459,7 +484,7 @@ main {
   bottom: 15px;
   left: 50%;
   width: 100%;
-  max-width: 1850px;
+  max-width: 98.95833333333334vw;
   margin: auto;
   font-family: $font-hiragino;
   color: #fff;
@@ -467,11 +492,12 @@ main {
 
   h2 {
     margin-left: 10px;
-    font-size: var(--fz48);
+    font-size: 2.5vw;
+    -webkit-text-stroke-width: 1px;
   }
 
   span {
-    font-size: var(--fz170);
+    font-size: 8.854166666666668vw;
     font-weight: 900;
     line-height: 1;
     letter-spacing: 0.05em;
