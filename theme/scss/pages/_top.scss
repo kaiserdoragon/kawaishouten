@@ -132,7 +132,7 @@
       color: $color-blue1;
       letter-spacing: 0;
       transform: translateY(2em);
-      animation: textanimation 1s forwards;
+      animation: textanimation 0.5s forwards;
       -webkit-text-stroke-width: 4px;
 
       &:nth-child(1) {
@@ -598,7 +598,7 @@
       color: $color-blue1;
       letter-spacing: 0;
       transform: translateY(2em);
-      animation: textanimation 1s forwards;
+      animation: textanimation 0.5s forwards;
       -webkit-text-stroke-width: 6px;
 
       &:nth-child(1) {
@@ -826,7 +826,7 @@
       color: #d9d9d9;
       letter-spacing: 0;
       transform: translateY(2em);
-      animation: textanimation 1s forwards;
+      animation: textanimation 0.5s forwards;
       -webkit-text-stroke-width: 7px;
 
       &:nth-child(1) {
@@ -927,7 +927,7 @@
       color: #d9d9d9;
       letter-spacing: 0;
       transform: translateY(2em);
-      animation: textanimation 1s forwards;
+      animation: textanimation 0.5s forwards;
       -webkit-text-stroke-width: 7px;
 
       &:nth-child(1) {
