@@ -376,11 +376,11 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    gap: 145px;
+    gap: 9%;
     align-items: center;
     width: 100%;
-    max-width: 1575px;
-    padding: 1.4583333333vw 0 1.4583333333vw 4.53125vw;
+    max-width: 1580px;
+    padding: 1.4583333333vw 0 1.4583333333vw 6%;
     margin: auto;
     background: #fff;
     border-radius: 30px;
@@ -390,6 +390,11 @@
       height: 170px;
       object-fit: contain;
       background: #e4e8ef;
+    }
+
+    @media (width <= 1420px) {
+      gap: 7%;
+      padding: 1.4583333333vw 0 1.4583333333vw 3%;
     }
 
     @media (961px <= width <= 1280px) {
@@ -424,7 +429,7 @@
   &--contents {
     display: flex;
     flex-wrap: wrap;
-    gap: 58px;
+    gap: 3%;
     align-items: center;
 
     @media (961px <= width <= 1280px) {
@@ -446,7 +451,7 @@
 
   //.top_info--list
   &--list {
-    width: 34vw;
+    width: 70%;
 
     @media (961px <= width <= 1280px) {
       width: 43vw;
@@ -1003,7 +1008,7 @@
   // .top_company--inner
   &--inner {
     box-sizing: border-box;
-    width: min(2050px, 100%);
+    width: min(1850px, 100%);
     padding: 0 min(4vw, 25px);
     margin: auto;
 
@@ -1037,12 +1042,12 @@
     justify-content: center;
 
     div {
-      width: 41.6666666667vw;
+      width: 42%;
       margin-top: 150px;
     }
 
     img {
-      width: 47.864583333333336vw;
+      width: 50%;
       height: auto;
       border-radius: 25px;
       object-fit: cover;
