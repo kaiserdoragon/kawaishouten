@@ -4,6 +4,7 @@ nbproject/
 .idea/
 **/css/style.css
 **/css/reset.css
+**/css/style.css.map
 **/css/style.min.css
 **/css/reset.min.css
 **/js/scripts.min.js

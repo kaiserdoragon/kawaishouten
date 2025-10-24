@@ -1,8 +1,13 @@
 <?php get_header(); ?>
-<div class="eyecatch">
-  <h1>404 NOT FOUND</h1>
+<div class="eyecatch -news">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/eyecatch.jpg" alt="" width="1920" height="420">
+  <div class="page_ttl">
+    <h2>404エラー</h2>
+    <span>404 Error.</span>
+  </div>
 </div>
-<?php get_template_part('include/common', 'breadcrumb'); //　Breadcrumb NavXTを使わないときは削除?>
+<?php get_template_part('include/common', 'breadcrumb'); //　Breadcrumb NavXTを使わないときは削除
+?>
 <main class="notfound_page">
   <div class="container">
     <h2 class="notfound_page--ttl">お探しのページは見つかりませんでした </h2>
@@ -13,7 +18,3 @@
   </div>
 </main>
 <?php get_footer(); ?>
-
-
-
-

@@ -37,9 +37,9 @@ if (Gnav_btn) {
   const handleMenuToggle = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    
+
     const isOpen = Gnav.classList.contains("is-open");
-    
+
     if (!isOpen) {
       // メニューを開く
       scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -77,9 +77,9 @@ if (Gnav_btn) {
 
   // メニュー外をクリックしたら閉じる
   document.addEventListener("click", (e) => {
-    if (Gnav.classList.contains("is-open") && 
-        !Gnav.contains(e.target) && 
-        !Gnav_btn.contains(e.target)) {
+    if (Gnav.classList.contains("is-open") &&
+      !Gnav.contains(e.target) &&
+      !Gnav_btn.contains(e.target)) {
       closeMenu();
     }
   });
@@ -92,19 +92,11 @@ if (Gnav_btn) {
   });
 }
 
-// ページトップへ移動するボタン(クリックでページトップへスクロール) ///////////////////////////
-const Totop = document.getElementById("js-totop");
-if (Totop) {
-  Totop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
-
 // アンカーリンクのスムーススクロール //////////////////////////////////////////////
 // iOSでスムーススクロールをするためには「<script src=" https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>」を読み込む必要がある。
 const headerHeight = ((load) => {
   return load ? document.getElementsByClassName("header")[0].offsetHeight : 0;
-})(true); // ※ヘッダー高さをロード時にはかりたいときは、ここをtrueにする
+})(false); // ※ヘッダー高さをロード時にはかりたいときは、ここをtrueにする
 
 const anchor = document.querySelectorAll("a[href*='#']:not(.is-noscroll)"); // 発火しない場合は「.is-noscroll」
 [...anchor].forEach((element) => {
@@ -140,10 +132,25 @@ window.addEventListener("load", () => {
 
 
 
+(function ($, root, undefined) {
+  $(function () {
+    // 'js-select'クラスが付いている要素を全て取得
+    const select = $(".js-select");
+    // is-emptyクラスを付与
+    select.addClass("is-empty");
 
-
-// (function ($, root, undefined) {
-//   // ------------------------------
-//   // jqueryはここに記載
-//   // ------------------------------
-// })(jQuery, this);
+    // selectのoptionを切り替え時
+    select.on("change", function () {
+      // option選択時
+      if ($(this).val() !== "") {
+        // is-emptyクラスを削除
+        $(this).removeClass("is-empty");
+      }
+      // placeholder選択時
+      else {
+        // is-emptyクラスを付与
+        $(this).addClass("is-empty");
+      }
+    });
+  });
+})(jQuery, this);

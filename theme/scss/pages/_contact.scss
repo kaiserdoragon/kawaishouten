@@ -6,17 +6,44 @@
 // ---------------------------------------------
 
 // contact form
-
-                                                                                            
-@forward "../import/form_monkey";
+@forward "../import/form";
 
 // エラーメッセージ用ツールチップ
-
 @forward "../import/form-tooltip";
 
 // ---------------------------------------------
 //  contact用の追加クラス
 // ---------------------------------------------
+
+.contact_page {
+  padding: 150px 0 250px;
+}
+
+.contact_lead {
+  text-align: center;
+
+  // .contact_lead--number
+  &--number {
+    margin-bottom: 10px;
+    font-family: $font-hiragino;
+    font-size: var(--fz32);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+
+    +p {
+      margin-bottom: 80px;
+    }
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-weight: bold;
+    color: $color-blue1;
+  }
+}
 
 #loading {
   display: none;
@@ -26,4 +53,64 @@
   padding: 20px;
   font-size: var(--fz18);
   text-align: center;
+}
+
+.privacy {
+  max-height: 300px;
+  padding: 1em;
+  margin: 1em 0;
+  overflow-y: scroll;
+  font-size: 0.9em;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+.wpcf7-submit:disabled {
+  background: #999;
+}
+
+.select_wrap {
+  position: relative;
+
+  select {
+    width: 100%;
+    max-width: 550px;
+    padding: 10px 25px;
+    color: #333; /* option選択時の文字色 */
+    background: url(../img/common/arrow_select.svg) no-repeat right 10px center / 13px, #f4f6f7;
+    border: none;
+    border-radius: 10px;
+    appearance: none;
+  }
+
+  select::-ms-expand {
+    display: none; /* デフォルトの矢印を非表示(IE用) */
+  }
+
+  select.is-empty {
+    color: #c4c4c4; /* placeholder(初期値)の文字色 */
+  }
+}
+
+::placeholder {
+  color: #c4c4c4;
+}
+
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required,
+textarea.wpcf7-form-control.wpcf7-textarea {
+  width: 100%;
+  max-width: 550px;
+  padding: 13px 25px;
+  background: #f4f6f7;
+  border: none;
+  border-radius: 10px;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.your-address1 {
+  width: 165px;
+}
+
+textarea.wpcf7-form-control.wpcf7-textarea {
+  height: 150px;
 }

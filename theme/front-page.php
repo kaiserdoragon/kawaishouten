@@ -94,6 +94,7 @@
           <?php if (has_post_thumbnail()): ?>
             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
           <?php else: ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/common/img_thumbnail.jpg" alt="" width="169" height="169"></a>
           <?php endif; ?>
         </div>
         <div class="top_info--list">

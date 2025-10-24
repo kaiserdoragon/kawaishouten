@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="eyecatch -news">
   <img src="<?php echo get_template_directory_uri(); ?>/img/common/eyecatch.jpg" alt="" width="1920" height="420">
-  <div>
+  <div class="page_ttl">
     <h2>お知らせ</h2>
     <span>News.</span>
   </div>
