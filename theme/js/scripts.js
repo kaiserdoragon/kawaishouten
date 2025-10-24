@@ -153,4 +153,49 @@ window.addEventListener("load", () => {
       }
     });
   });
+
+  $(window).scroll(function () {
+    $(".anime_wrap").each(function () {
+      var offset = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var wHeight = $(window).height();
+
+      if (scroll > offset - wHeight + wHeight / 2) {
+        $(this).addClass("show");
+      }
+    });
+  });
 })(jQuery, this);
+
+
+
+jQuery(document).ready(function ($) {
+  $('.postal-code').on('input', function () {
+    const postalCode = $(this).val().replace(/[^0-9]/g, ''); // 数字以外を除去
+    const addressField = $('.your-address2');
+
+    if (postalCode.length === 7) {
+      // 郵便番号APIへのリクエスト
+      $.ajax({
+        url: `https://zipcloud.ibsnet.co.jp/api/search?zipcode=${postalCode}`,
+        dataType: 'jsonp',
+        success: function (data) {
+          if (data.results) {
+            const result = data.results[0];
+            const address = `${result.address1} ${result.address2} ${result.address3}`;
+            addressField.val(address); // 住所を自動入力
+          } else {
+            alert('該当する住所が見つかりませんでした。');
+            addressField.val('');
+          }
+        },
+        error: function () {
+          alert('住所検索に失敗しました。');
+        },
+      });
+    }
+  });
+});
+
+
+

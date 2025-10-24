@@ -456,12 +456,21 @@ main {
   @media (width <= 1450px) {
     img {
       height: 400px;
+      object-fit: cover;
     }
   }
 
   @include tb-mq {
     img {
       height: auto;
+    }
+  }
+
+  @include max-mq {
+    img {
+      height: 40vw;
+      object-fit: cover;
+      object-position: 80%;
     }
   }
 }

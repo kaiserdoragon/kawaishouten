@@ -53,70 +53,15 @@
               <p>.</p>
             </div>
           </h2>
-          <strong>個性や強みを尊重し、<br>助け合いとチームワークで未来を築く</strong>
+          <strong>個性や強みを尊重し、<br class="is-hidden_sp">助け合いとチームワークで未来を築く</strong>
           <p>
-            私たちの原動力は「人」です。 <br>
-            地域に根ざした物流サービスを通じて、人々の暮らしと産業を支える存在でありたいと考えています。<br>
-            社員一人ひとりの力を尊重し、仲間と協力し合うことで、より良い環境とサービスを築いてきました。<br>
-            これからも物流の現場から価値を創造し、お客様と地域社会の発展に貢献し続けてまいります。
+            東海を中心に、生活の“当たり前”を支える配送の仕事。<br>
+            市場配送（定期便）や一般貨物配送、産地便・地場集荷まで、地域に根ざした多様なフィールドで活躍できます。<br>
+            私たちは、助け合いの心とチームワークを軸に、未経験からの挑戦を研修・同乗指導で支援し、資格取得費用補助で成長を後押しします。<br>
+            有給休暇取得率100％の働きやすい環境で、次の一歩を。
           </p>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/top/about.png" alt="" width="547" height="456">
-      </div>
-      <a href="<?php echo esc_url(home_url('/about')); ?>">
-        More
-        <svg class="icon-arrow" width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M27 1L32 6L27 11" stroke="currentColor" />
-          <path d="M0 6L32 6" stroke="currentColor" />
-        </svg>
-      </a>
-    </div>
-  </section>
-
-
-  <section class="top_info">
-    <div class="top_info--inner">
-      <h2 class="top_info--ttl">
-        <span>お知らせ</span>
-        NEWS.
-        <a href="<?php echo esc_url(home_url('/news')); ?>">MORE</a>
-      </h2>
-      <div class="top_info--contents">
-        <?php
-        $args = array(
-          'posts_per_page' => 1,
-          'post_type' => 'post', //postは通常の投稿機能
-          'post_status' => 'publish'
-        );
-        $my_posts = get_posts($args);
-        ?>
-        <div class="top_info--thumbnail">
-          <?php if (has_post_thumbnail()): ?>
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-          <?php else: ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/common/img_thumbnail.jpg" alt="" width="169" height="169"></a>
-          <?php endif; ?>
-        </div>
-        <div class="top_info--list">
-          <?php
-          if (!empty($my_posts)) :
-            foreach ($my_posts as $post): setup_postdata($post); ?>
-              <a href="<?php the_permalink(); ?>">
-                <h3>
-                  <?php the_title(); ?>
-                </h3>
-                <span class="top_info--time">
-                  <?php the_time('Y年m月d日'); ?>
-                </span>
-                <p class="top_info--txt">
-                  <?php echo strip_tags(get_the_excerpt()); ?>
-                </p>
-              </a>
-            <?php endforeach; ?>
-            <?php wp_reset_postdata(); // ← これが重要！
-            ?>
-          <?php endif; ?>
-        </div>
       </div>
     </div>
   </section>
@@ -129,7 +74,7 @@
   <section class="top_business">
     <div class="container">
       <h2 class="ttl_sec">
-        <span>企業取り組み</span>
+        <span>事業内容と取り組み</span>
         <div class="js_target">
           <p>B</p>
           <p>U</p>
@@ -185,10 +130,92 @@
     </div>
   </section>
 
+  <section class="top_about top_recruit">
+    <div class="container">
+      <div class="top_about--inner">
+        <div>
+          <h2 class="ttl_sec">
+            <span>採用情報</span>
+            <div class="js_target">
+              <p>R</p>
+              <p>E</p>
+              <p>C</p>
+              <p>R</p>
+              <p>U</p>
+              <p>I</p>
+              <p>T</p>
+              <p>.</p>
+            </div>
+          </h2>
+          <p class="top_recruit--txt">
+            東海を中心に、生活の“当たり前”を支える配送の仕事。<br>
+            市場配送（定期便）や一般貨物配送、産地便・地場集荷まで、地域に根ざした多様なフィールドで活躍できます。私たちは、助け合いの心とチームワークを軸に、未経験からの挑戦を研修・同乗指導で支援し、資格取得費用補助で成長を後押しします。有給休暇取得率100％の働きやすい環境で、次の一歩を。
+          </p>
+          <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_driver.svg" alt="ドライバー求人サイト ドラEVER" width="191" height="66" class="top_recruit--site">
+          <a href="<?php echo esc_url(home_url('/')); ?>">
+            採用情報をドラEVERで見る
+            <svg class="icon-arrow" width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M27 1L32 6L27 11" stroke="currentColor" />
+              <path d="M0 6L32 6" stroke="currentColor" />
+            </svg>
+          </a>
+        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/top/about.png" alt="" width="547" height="456">
+      </div>
+    </div>
+  </section>
+
+  <section class="top_info">
+    <div class="top_info--inner">
+      <h2 class="top_info--ttl">
+        <span>お知らせ</span>
+        NEWS.
+        <a href="<?php echo esc_url(home_url('/news')); ?>">MORE</a>
+      </h2>
+      <div class="top_info--contents">
+        <?php
+        $args = array(
+          'posts_per_page' => 1,
+          'post_type' => 'post', //postは通常の投稿機能
+          'post_status' => 'publish'
+        );
+        $my_posts = get_posts($args);
+        ?>
+        <div class="top_info--thumbnail">
+          <?php if (has_post_thumbnail()): ?>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+          <?php else: ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/common/img_thumbnail.jpg" alt="" width="169" height="169"></a>
+          <?php endif; ?>
+        </div>
+        <div class="top_info--list">
+          <?php
+          if (!empty($my_posts)) :
+            foreach ($my_posts as $post): setup_postdata($post); ?>
+              <a href="<?php the_permalink(); ?>">
+                <h3>
+                  <?php the_title(); ?>
+                </h3>
+                <span class="top_info--time">
+                  <?php the_time('Y年m月d日'); ?>
+                </span>
+                <p class="top_info--txt">
+                  <?php echo strip_tags(get_the_excerpt()); ?>
+                </p>
+              </a>
+            <?php endforeach; ?>
+            <?php wp_reset_postdata(); // ← これが重要！
+            ?>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="top_company">
     <div class="top_company--inner">
       <h2 class="ttl_sec">
-        <div class="js_target ">
+        <div class="js_target">
           <p>
             <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_c.svg" alt="C" width="116" height="130">
           </p>
@@ -231,7 +258,7 @@
             また、社員が安心して働ける職場環境づくりが、高品質なサービスの提供につながると考えています。教育制度の充実、健康管理の徹底、コミュニケーションの活性化など、「人」を大切にする運営を心掛けています。<br>
             「選ばれる企業」であり続けるため、誠実な姿勢を忘れず、一歩ずつ着実に前進してまいります。
           </p>
-          <a href="<?php echo esc_url(home_url('/about')); ?>">
+          <a href="<?php echo esc_url(home_url('/company')); ?>">
             More
             <svg class="icon-arrow" width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M27 1L32 6L27 11" stroke="currentColor" />
@@ -243,7 +270,9 @@
     </div>
   </section>
 
-
+  <div class="anime_wrap pattern6">
+    <img src="https://higashidadan.com/wp-content/uploads/2022/03/image6.jpg" alt="">
+  </div>
 
   <!-- <div class="swiper">
     <div class="swiper-wrapper">

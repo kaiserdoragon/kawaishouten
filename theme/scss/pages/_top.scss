@@ -45,7 +45,7 @@
 }
 
 .top_about {
-  padding: 100px 0 200px;
+  padding: 100px 0 80px;
 
   span {
     display: flex;
@@ -54,7 +54,7 @@
     margin-left: 15px;
     font-family: $font-sans;
     font-size: var(--fz20);
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 0;
     -webkit-text-stroke-width: 0;
 
@@ -418,9 +418,7 @@
 
       img {
         width: 100%;
-        height: auto;
-        aspect-ratio: 1 / 1;
-        object-fit: contain;
+        height: 70vw;
       }
     }
   }
@@ -509,7 +507,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: var(--fz128);
     line-height: 1.3;
     color: $color-blue1;
@@ -743,7 +741,7 @@
 }
 
 .top_company {
-  padding: 100px 0;
+  padding: 200px 0 180px;
 
   span {
     display: flex;
@@ -1082,11 +1080,13 @@
 
       img {
         width: 100%;
-        height: 45vw;
+        height: 70vw;
       }
     }
 
     @include max-mq {
+      gap: 40px;
+
       p {
         padding-right: 0;
         margin-bottom: 40px;
@@ -1184,3 +1184,67 @@
   }
 }
 
+.top_recruit {
+  .top_about--inner {
+    flex-direction: row;
+  }
+
+  .txt_animation_underup {
+    p {
+      -webkit-text-stroke-width: 6px;
+    }
+  }
+
+  a {
+    margin: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    -webkit-text-stroke-width: 0;
+  }
+
+  // .top_recruit--txt
+  &--txt {
+    margin-top: 50px;
+    font-size: var(--fz20);
+    font-weight: 700;
+    color: #001f63;
+  }
+
+  // .top_recruit--site
+  &--site {
+    display: block;
+    width: auto !important;
+    margin: 0 0 0 auto;
+  }
+}
+
+
+
+.anime_wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.pattern6::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #fff;
+  transition: 0.5s;
+}
+
+.pattern6.show::before {
+  transform: translateX(100%);
+}
+
+.pattern6 img {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pattern6.show img {
+  opacity: 1;
+}

@@ -127,6 +127,19 @@ function header_style_script()
 
 add_action('wp_enqueue_scripts', 'header_style_script');
 
+//ContactForm7で郵便番号を自動入力
+function enqueue_postcode_script()
+{
+  wp_enqueue_script(
+    'postcode-autofill',
+    get_template_directory_uri() . '/js/postcode-autofill.js', // 適宜パスを修正
+    array('jquery'),
+    null,
+    true
+  );
+}
+add_action('wp_enqueue_scripts', 'enqueue_postcode_script');
+
 
 //指定のjsにdefer（レンダリングブロック防止の記述）をつける。
 //★deferだと動作しない場合は、jquery-coreについてはdeferをやめると良い。
