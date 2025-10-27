@@ -9,30 +9,39 @@
 <?php get_template_part('include/common', 'breadcrumb'); ?>
 <div class="news_page">
   <main>
-    <div class="container">
+    <div class="news_archive">
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-          <section>
+          <article>
             <a href="<?php the_permalink(); ?>">
-              <div>
+              <div class="news_archive--img">
                 <?php if (has_post_thumbnail()): ?>
-                  <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail(); ?>
-                  </a>
+                  <?php the_post_thumbnail(); ?>
                 <?php else: ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/img_thumbnail.jpg" alt="" width="169" height="169">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/img_thumbnail.jpg" alt="" width="85" height="85">
                 <?php endif; ?>
               </div>
-              <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-              <time class="post_meta--date" datetime="<?php the_time('Y年n月j日'); ?>"><?php the_time('Y年n月j日'); ?></time>
-              <p><?php echo strip_tags(get_the_excerpt()); ?></p>
+              <div class="news_archive--contents">
+                <h2>
+                  <?php
+                  $title  = get_the_title();
+                  $limit  = 15; // 15文字まで
+                  $short  = mb_substr($title, 0, $limit, 'UTF-8');
+                  $after  = (mb_strlen($title, 'UTF-8') > $limit) ? '' : ''; // 省略記号
+
+                  echo esc_html($short . $after);
+                  ?>
+                </h2>
+                <time class="post_meta--date" datetime="<?php the_time('Y年n月j日'); ?>"><?php the_time('Y年n月j日'); ?></time>
+                <p><?php echo strip_tags(get_the_excerpt()); ?></p>
+              </div>
             </a>
-          </section>
+          </article>
         <?php endwhile; ?>
       <?php endif; ?>
-      <div class="pagination">
-        <?php wp_pagination(); ?>
-      </div>
+    </div>
+    <div class="pagination">
+      <?php wp_pagination(); ?>
     </div>
   </main>
 </div>

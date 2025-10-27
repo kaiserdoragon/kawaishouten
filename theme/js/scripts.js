@@ -133,6 +133,8 @@ window.addEventListener("load", () => {
 
 
 (function ($, root, undefined) {
+  console.log("JQ");
+
   $(function () {
     // 'js-select'クラスが付いている要素を全て取得
     const select = $(".js-select");
@@ -169,6 +171,7 @@ window.addEventListener("load", () => {
 
 
 
+//Contact Form7の郵便番号と住所連動
 jQuery(document).ready(function ($) {
   $('.postal-code').on('input', function () {
     const postalCode = $(this).val().replace(/[^0-9]/g, ''); // 数字以外を除去

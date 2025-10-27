@@ -274,7 +274,7 @@
     <img src="https://higashidadan.com/wp-content/uploads/2022/03/image6.jpg" alt="">
   </div>
 
-  <!-- <div class="swiper">
+  <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">Slide 1</div>
       <div class="swiper-slide">Slide 2</div>
@@ -284,6 +284,6 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
     <div class="swiper-scrollbar"></div>
-  </div> -->
+  </div>
 </main>
 <?php get_footer(); ?>

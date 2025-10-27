@@ -105,17 +105,39 @@
     }
 
     @include max-mq {
+      max-width: 100%;
+
       td {
+        display: block;
         padding: 10px 5px;
+
+        p {
+          margin-left: 0;
+        }
       }
 
       th {
+        display: block;
+        width: fit-content;
         padding: 5px;
 
         &::after {
           top: 5px;
-          right: 10px;
+          right: -65px;
         }
+      }
+
+      tr {
+        display: block;
+        margin-bottom: 30px;
+
+        &:nth-child(5) {
+          margin-bottom: 0;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
       }
     }
   }

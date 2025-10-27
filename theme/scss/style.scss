@@ -12,9 +12,10 @@
 @use "pages/top";
 
 // 下層ページ
-@use "pages/news";
-@use "pages/contact";
-@use "pages/notfound"; // 404ページ見つかりません
+@use "pages/news"; // 投稿ページ
+@use "pages/company"; // 会社概要ページ
+@use "pages/contact"; // お問い合わせページ
+@use "pages/notfound"; // 404ページ
 
 // wordpress用 ブログ記事をリッチテキストエディタ
 @use "post";

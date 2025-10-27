@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@use "../variables" as *;
+
+// ---------------------------------------------
+//  会社概要専用
+// ---------------------------------------------
+
+.company_overview {
+  // .company_overview--gmap
+  &--gmap {
+    iframe {
+      display: block;
+      width: 100%;
+      max-width: 1277px;
+      height: auto;
+      aspect-ratio: 1277 / 514;
+      margin: auto;
+    }
+  }
+}
+
+

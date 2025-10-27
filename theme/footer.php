@@ -28,6 +28,26 @@
 </footer>
 </div>
 <?php wp_footer(); ?>
+<script>
+    window.WebFontConfig = {
+        custom: {
+            families: ['Noto Sans JP', 'Oswald'],
+            urls: [
+                'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap'
+            ]
+        },
+        active: function() {
+            sessionStorage.fonts = true;
+        }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>
 </body>
 
 </html>
