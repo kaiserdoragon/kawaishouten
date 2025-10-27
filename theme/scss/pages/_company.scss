@@ -5,6 +5,52 @@
 //  会社概要専用
 // ---------------------------------------------
 
+.company_page {
+  padding: 115px 0 200px;
+}
+
+.company_message {
+  // .company_message--inner
+  &--inner {
+    padding: 50px 0;
+    background: #eff8ff;
+  }
+
+  // .company_message--contents
+  &--contents {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1325px;
+    padding: 50px min(4vw, 25px);
+    margin: auto;
+    background: #fff;
+    border-radius: 20px;
+
+    p {
+      width: 51%;
+      margin-top: 15px;
+      font-size: var(--fz20);
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    span {
+      display: block;
+      margin-top: 35px;
+      font-size: var(--fz20);
+      font-weight: 500;
+      color: $color-blue1;
+      text-align: right;
+    }
+  }
+}
+
+
 .company_overview {
   // .company_overview--gmap
   &--gmap {

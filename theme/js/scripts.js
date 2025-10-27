@@ -171,7 +171,7 @@ window.addEventListener("load", () => {
 
 
 
-//Contact Form7の郵便番号と住所連動
+//別URLからやってきたときに発火
 jQuery(document).ready(function ($) {
   $('.postal-code').on('input', function () {
     const postalCode = $(this).val().replace(/[^0-9]/g, ''); // 数字以外を除去

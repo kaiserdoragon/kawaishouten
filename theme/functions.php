@@ -492,17 +492,6 @@ add_action(
   11 // 優先度を少し高く設定 (デフォルトは10)
 );
 
-// -------------------------------------
-// ContactForm7で郵便番号を自動入力
-// -------------------------------------
-function enqueue_postcode_script()
-{
-  wp_enqueue_script(
-    'postcode-autofill',
-    get_template_directory_uri() . '/js/postcode-autofill.js', // 適宜パスを修正
-    array('jquery'),
-    null,
-    true
-  );
-}
-add_action('wp_enqueue_scripts', 'enqueue_postcode_script');
+
+/*YubinBangoライブラリ*/
+wp_enqueue_script('yubinbango', 'https://yubinbango.github.io/yubinbango/yubinbango.js', array(), null, true);

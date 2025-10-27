@@ -1,13 +1,16 @@
 const swiper = new Swiper(".swiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  loop: true, // ループ
+  centeredSlides: true, // これ重要
+  speed: 1500, // 少しゆっくり(デフォルトは300)
+  slidesPerView: 3.8, // 一度に表示する枚数
+  spaceBetween: 50, // スライド間の距離
+  centeredSlides: true, // アクティブなスライドを中央にする
+  autoplay: {
+    delay: 2000, // 1秒後に次のスライド
   },
+  // ページネーション
   pagination: {
-    el: ".swiper-pagination", //必須の設定：ページネーションのclass指定
-    type: "bullets",
-    clickable: "clickable",
+    el: ".swiper-pagination",
+    clickable: true,
   },
-  loop: true, //繰り返し指定
-  spaceBetween: 10, //スライド感の余白
 });

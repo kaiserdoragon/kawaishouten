@@ -94,29 +94,29 @@
         <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business01.png" alt="" width="320" height="220" alt="">
           <dl>
-            <dt>運行情報システム<br>管理システムの導入</dt>
-            <dd>そらEVER「運SOUL」を活用して、車両管理及び乗務員の管理の一元化アプリを利用して車両の運行状況、貨物追跡等 正確且つ安全な運行管理を実施しています。</dd>
+            <dt>市場配送（定期便）</dt>
+            <dd>東海エリアの市場・大手スーパー向けに定期ルートで安定運行。発注リズムに合わせて配車・時刻管理を行い、遅配ゼロを目標に運行管理。</dd>
           </dl>
         </li>
         <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business02.png" alt="" width="320" height="220" alt="">
           <dl>
-            <dt>庫内温度監視</dt>
-            <dd>冷凍冷蔵車には、庫内温度監視システム「おんどとり」を装備して生鮮食料品などの輸送の温度管理をしています。</dd>
+            <dt>一般貨物配送（BtoB）</dt>
+            <dd>大手運送会社等との連携を含む企業間配送。雑貨・工業製品など幅広い品目に対応。手積み／パレット輸送／フォークリフトに対応。</dd>
           </dl>
         </li>
         <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business03.png" alt="" width="320" height="220" alt="">
           <dl>
-            <dt>アルコール検査</dt>
-            <dd>運転者にアルコールチェッカーを使用し始業前、始業後にアルコール検査を実施しています。</dd>
+            <dt>産地便（関東・関西）</dt>
+            <dd>産地〜市場・センター間の中距離輸送。青果物など鮮度重視の荷扱いで、納品時間・温度帯の指定に柔軟対応。</dd>
           </dl>
         </li>
         <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business04.png" alt="" width="320" height="220" alt="">
           <dl>
-            <dt>教育プログラム</dt>
-            <dd>運行管理者、整備管理者による、定期的な社内教育に取り組んでいます。初任者運転車講習、運行管理者基礎講習 運転者への適性診断の実施</dd>
+            <dt>地場集荷</dt>
+            <dd>名古屋近郊を中心に集荷→仕分け→納品をワンストップ。スポット／チャーターのご相談も可能。</dd>
           </dl>
         </li>
       </ol>
@@ -185,7 +185,7 @@
           <?php if (has_post_thumbnail()): ?>
             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
           <?php else: ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/common/img_thumbnail.jpg" alt="" width="169" height="169"></a>
+            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/common/img_thumbnail.jpg" alt="" width="169" height="169"></a>
           <?php endif; ?>
         </div>
         <div class="top_info--list">
@@ -272,18 +272,6 @@
 
   <div class="anime_wrap pattern6">
     <img src="https://higashidadan.com/wp-content/uploads/2022/03/image6.jpg" alt="">
-  </div>
-
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-scrollbar"></div>
   </div>
 </main>
 <?php get_footer(); ?>

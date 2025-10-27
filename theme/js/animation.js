@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!element.classList.contains('active') && rect.top < windowHeight - 50) {
         setTimeout(function () {
           element.classList.add('active');
-        }, i * 500); // 1秒(1000)は少し長いため、0.3秒(300)に調整
+        }, i * 500); // 1秒(1000)は少し長いため、0.5秒(500)に調整
       }
     });
   }
