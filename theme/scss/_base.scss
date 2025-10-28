@@ -16,6 +16,12 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: $color-body;
+
+  &.menu-open {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 // font-sizeは下記の用に指定
@@ -185,7 +191,7 @@ main {
 
 .gnav_btn {
   position: fixed;
-  top: 10px;
+  top: 17px;
   right: 10px;
   z-index: 100;
   display: none; // PC時非表示

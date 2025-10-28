@@ -119,7 +119,7 @@ table {
   @include max-mq {
     p {
       margin-bottom: 5px;
-      font-size: 23px;
+      font-size: var(--fz35);
     }
   }
 }
@@ -201,13 +201,14 @@ table {
     padding-left: 20px;
     font-size: 8.854166666666668vw;
     color: #fff;
+    letter-spacing: 0;
     white-space: nowrap;
     animation: loop 40s linear infinite;
   }
 
   @include max-mq {
     p {
-      font-size: var(--fz50);
+      font-size: var(--fz75);
     }
   }
 }

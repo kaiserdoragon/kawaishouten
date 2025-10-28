@@ -55,10 +55,10 @@
           </h2>
           <strong>個性や強みを尊重し、<br class="is-hidden_sp">助け合いとチームワークで未来を築く</strong>
           <p>
-            東海を中心に、生活の“当たり前”を支える配送の仕事。<br>
-            市場配送（定期便）や一般貨物配送、産地便・地場集荷まで、地域に根ざした多様なフィールドで活躍できます。<br>
-            私たちは、助け合いの心とチームワークを軸に、未経験からの挑戦を研修・同乗指導で支援し、資格取得費用補助で成長を後押しします。<br>
-            有給休暇取得率100％の働きやすい環境で、次の一歩を。
+            私たちの原動力は「人」です。<br>
+            地域に根ざした物流サービスを通じて、人々の暮らしと産業を支える存在でありたいと考えています。<br>
+            社員一人ひとりの力を尊重し、仲間と協力し合うことで、より良い環境とサービスを築いてきました。<br>
+            これからも物流の現場から価値を創造し、お客様と地域社会の発展に貢献し続けてまいります。
           </p>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/top/about.png" alt="" width="547" height="456">
@@ -120,7 +120,7 @@
           </dl>
         </li>
       </ol>
-      <a href="<?php echo esc_url(home_url('/about')); ?>">
+      <a href="<?php echo esc_url(home_url('/business')); ?>">
         More
         <svg class="icon-arrow" width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M27 1L32 6L27 11" stroke="currentColor" />
@@ -269,9 +269,5 @@
       </div>
     </div>
   </section>
-
-  <div class="anime_wrap pattern6">
-    <img src="https://higashidadan.com/wp-content/uploads/2022/03/image6.jpg" alt="">
-  </div>
 </main>
 <?php get_footer(); ?>

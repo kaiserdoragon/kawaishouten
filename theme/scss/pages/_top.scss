@@ -27,11 +27,9 @@
     position: absolute;
     bottom: 40px;
     left: 25px;
-
-    // font-size: 8.854166666666668vw;
     line-height: 1.2;
     color: #fff;
-    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-width: 7px;
     letter-spacing: 7px;
   }
 
@@ -40,6 +38,14 @@
       bottom: 10px;
       left: 10px;
       -webkit-text-stroke-width: 3px;
+    }
+
+    img {
+      width: 100%;
+      height: 539px;
+      aspect-ratio: 320 / 539;
+      object-fit: cover;
+      object-position: 71%;
     }
   }
 }
@@ -107,7 +113,6 @@
   }
 
   p {
-    margin-bottom: 30px;
     line-height: 1.8;
   }
 
@@ -178,7 +183,7 @@
   &--inner {
     display: flex;
     flex-direction: row-reverse;
-    gap: min(180px, 9.375vw);
+    gap: 8.333333333333332vw;
     align-items: center;
     justify-content: center;
 
@@ -192,7 +197,7 @@
 
     @include max-mq {
       flex-direction: column;
-      margin-bottom: 40px;
+      margin-bottom: 0;
 
       img {
         width: 100%;
@@ -209,7 +214,7 @@
   }
 
   @include max-mq {
-    padding: 100px 0;
+    padding: 100px 0 0;
 
     span {
       gap: 20px;
@@ -651,6 +656,7 @@
 
     @include tb-mq {
       width: 100%;
+      margin: 0 auto 40px;
     }
   }
 
@@ -722,6 +728,11 @@
       display: block;
       height: auto;
       font-size: var(--fz20);
+    }
+
+
+    a {
+      margin: 60px auto 0;
     }
 
     .txt_animation_underup {
@@ -1214,36 +1225,4 @@
     width: auto !important;
     margin: 0 0 0 auto;
   }
-}
-
-
-
-.anime_wrap {
-  position: relative;
-  overflow: hidden;
-}
-
-.pattern6::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background: #fff;
-  transition: 0.5s;
-}
-
-.pattern6.show::before {
-  transform: translateX(100%);
-}
-
-.pattern6 img {
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.pattern6.show img {
-  opacity: 1;
 }

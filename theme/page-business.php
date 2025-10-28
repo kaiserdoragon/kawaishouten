@@ -165,6 +165,10 @@
 
   <section class="top_business business_safety">
     <div class="container">
+      <h2>品質・安全・法令遵守</h2>
+      <p>
+        河合商店は、安全・衛生・法令遵守を「空気のように当たり前なもの」として、日々の現場に根づかせます。事故を起こさない、品質を落とさない、約束の時間を守る――その“当たり前”は偶然では生まれません。私たちは、ルールと仕組みを整え、記録し、振り返り、改善を繰り返すことで、お客さまの信頼と食の安心を運び続けます。現場の一人ひとりが同じ基準で判断し、迷わず正しく動けるよう、リスクを見える化し、温度や衛生状態を数値で管理し、運行状況をリアルタイムで共有。出庫前の体調・酒気帯びチェックから、積み込み・輸送・納品後の清掃まで、すべてを手順化しています。そしてその基準を、継続的な教育とテクノロジーでアップデートし続けます。
+      </p>
       <ol>
         <li class="is_fadein">
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/business01.png" alt="" width="320" height="220" alt="">
@@ -198,7 +202,49 @@
     </div>
   </section>
 
-  <div class="swiper">
+  <section class="business_days">
+    <h2 class="ttl_sec">
+      <span>河合商店の日々</span>
+      <div class="js_target is-hidden_sp">
+        <p>L</p>
+        <p>i</p>
+        <p>f</p>
+        <p>e</p>
+        <p>a</p>
+        <p>t</p>
+        <p>K</p>
+        <p>a</p>
+        <p>w</p>
+        <p>a</p>
+        <p>i</p>
+        <p>S</p>
+        <p>h</p>
+        <p>o</p>
+        <p>t</p>
+        <p>e</p>
+        <p>n</p>
+        <p>.</p>
+      </div>
+      <div class="js_target is-hidden_pc">
+        <p>L</p>
+        <p>i</p>
+        <p>f</p>
+        <p>e</p>
+        <p>a</p>
+        <p>t</p>
+      </div>
+      <div class="js_target_lower is-hidden_pc">
+        <p>L</p>
+        <p>i</p>
+        <p>f</p>
+        <p>e</p>
+        <p>a</p>
+        <p>t</p>
+      </div>
+    </h2>
+  </section>
+
+  <div class="swiper_business swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide01.png" alt="" width="450" height="337">
@@ -225,7 +271,6 @@
         <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide08.png" alt="" width="450" height="337">
       </div>
     </div>
-    <!-- ページネーション -->
     <div class="swiper-pagination"></div>
   </div>
 
