@@ -63,30 +63,6 @@ main {
   }
 }
 
-// グーグルマップ
-.googlemap {
-  position: relative;
-
-  &::before {
-    display: block;
-    padding-top: 46%; // 【マップの高さ】高さ/幅*100%
-    content: "";
-  }
-
-  iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  @include max-mq {
-    &::before {
-      padding-top: 450px;
-    }
-  }
-}
-
 // ---------------------------------------------
 //  ヘッダー関連 header
 // ---------------------------------------------
@@ -450,22 +426,28 @@ main {
 
   @media (width <= 1450px) {
     img {
-      height: 400px;
+      height: 25vw;
       object-fit: cover;
     }
-  }
 
-  @include tb-mq {
-    img {
-      height: auto;
+    &.-news {
+      img {
+        height: 25vw;
+        object-fit: cover;
+      }
     }
   }
 
   @include max-mq {
     img {
       height: 40vw;
-      object-fit: cover;
       object-position: 80%;
+    }
+
+    &.-news {
+      img {
+        height: 40vw;
+      }
     }
   }
 }
@@ -493,5 +475,18 @@ main {
     line-height: 1;
     letter-spacing: 0.05em;
     -webkit-text-stroke-width: 5px;
+  }
+
+  @include max-mq {
+    h2 {
+      margin-left: 0;
+      font-size: 5vw;
+      -webkit-text-stroke-width: 1px;
+    }
+
+    span {
+      font-size: var(--fz55);
+      -webkit-text-stroke-width: 1px;
+    }
   }
 }

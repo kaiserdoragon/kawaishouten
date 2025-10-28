@@ -16,7 +16,11 @@
 // ---------------------------------------------
 
 .contact_page {
-  padding: 150px 0 250px;
+  padding: 150px min(4vw, 25px) 250px;
+
+  @include max-mq {
+    padding: 100px min(4vw, 25px) 100px;
+  }
 }
 
 .contact_lead {
@@ -120,4 +124,16 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.your-address1 {
 
 textarea.wpcf7-form-control.wpcf7-textarea {
   height: 150px;
+}
+
+
+.contact_catch {
+  a {
+    margin: 0;
+    -webkit-text-stroke-width: 0;
+  }
+
+  .txt_animation_underup p:nth-child(6) {
+    width: auto !important;
+  }
 }

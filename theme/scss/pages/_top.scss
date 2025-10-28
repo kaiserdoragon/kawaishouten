@@ -423,7 +423,7 @@
 
       img {
         width: 100%;
-        height: 70vw;
+        height: 60vw;
       }
     }
   }
@@ -651,6 +651,7 @@
   &--txt {
     width: min(946px, 100%);
     margin: 0 auto 70px;
+    font-size: var(--fz18);
     line-height: 1.8;
     text-align: left;
 
@@ -1222,7 +1223,8 @@
   // .top_recruit--site
   &--site {
     display: block;
-    width: auto !important;
+    width: 191px !important;
+    height: 66px;
     margin: 0 0 0 auto;
   }
 }

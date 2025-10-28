@@ -151,7 +151,7 @@
             東海を中心に、生活の“当たり前”を支える配送の仕事。<br>
             市場配送（定期便）や一般貨物配送、産地便・地場集荷まで、地域に根ざした多様なフィールドで活躍できます。私たちは、助け合いの心とチームワークを軸に、未経験からの挑戦を研修・同乗指導で支援し、資格取得費用補助で成長を後押しします。有給休暇取得率100％の働きやすい環境で、次の一歩を。
           </p>
-          <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_driver.svg" alt="ドライバー求人サイト ドラEVER" width="191" height="66" class="top_recruit--site">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_driver.png" alt="ドライバー求人サイト ドラEVER" width="191" height="66" class="top_recruit--site">
           <a href="<?php echo esc_url(home_url('/')); ?>">
             採用情報をドラEVERで見る
             <svg class="icon-arrow" width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
