@@ -15,14 +15,14 @@ const swiper = new Swiper(".swiper_business", {
       // 766px以上（PC）
       loop: true,
       centeredSlides: true,
-      speed: 1500,
+      speed: 3000,
       slidesPerView: 3.8,
       initialSlide: 0,
       spaceBetween: 50,
       // freeModeを無効化したい場合
       freeMode: { enabled: false },
       pagination: { el: ".swiper-pagination", clickable: true },
-      autoplay: { delay: 2000 },
+      autoplay: { delay: 5000 },
     },
   },
 });

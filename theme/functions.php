@@ -493,5 +493,71 @@ add_action(
 );
 
 
-/*YubinBangoライブラリ*/
+// -------------------------------------
+// YubinBangoライブラリ（郵便番号と住所連動）
+// -------------------------------------
 wp_enqueue_script('yubinbango', 'https://yubinbango.github.io/yubinbango/yubinbango.js', array(), null, true);
+
+
+// -------------------------------------
+// HiraginoKaku読み込み
+// -------------------------------------
+define('MY_ADOBE_KIT_ID', 'uxc2ytx'); // ← あなたの Kit ID
+
+// 1) リソースヒントを追加（高速化）
+add_filter('wp_resource_hints', function ($urls, $relation_type) {
+  // use.typekit は Adobe Fonts のCDN
+  // https://helpx.adobe.com/jp/fonts/using/use-typekit-net.html
+  if ('preconnect' === $relation_type) {
+    $urls[] = array('href' => 'https://use.typekit.net', 'crossorigin' => '');
+    $urls[] = array('href' => 'https://use.typekit.com', 'crossorigin' => ''); // 互換
+  }
+  if ('dns-prefetch' === $relation_type) {
+    $urls[] = '//use.typekit.net';
+    $urls[] = '//use.typekit.com';
+  }
+  return $urls;
+}, 10, 2);
+
+// 2) Adobe Fonts キットJSを非同期で読み込み、直後に Typekit.load() を実行
+add_action('wp_enqueue_scripts', function () {
+  // 管理画面やフィード等はスキップ
+  if (is_admin() || is_feed()) return;
+
+  $kit_id = defined('MY_ADOBE_KIT_ID') ? MY_ADOBE_KIT_ID : '';
+  if (! $kit_id) return;
+
+  $kit_js  = sprintf('https://use.typekit.net/%s.js', $kit_id);
+  $handle  = 'adobe-fonts-kit';
+
+  // WP 6.3+：公式の "strategy" で async 指定（レンダーブロック回避）
+  // https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+  $args = array('in_footer' => false, 'strategy' => 'async');
+  wp_enqueue_script($handle, $kit_js, array(), null, $args);
+
+  // 旧来の埋め込み手順：Typekit.load({async:true}) を直後に実行
+  // https://helpx.adobe.com/jp/fonts/using/embed-codes.html
+  $inline = "try{Typekit.load({ async: true });}catch(e){}";
+  wp_add_inline_script($handle, $inline);
+}, 5);
+
+// 3) （フォールバック）WP 6.2 以下でも async を付ける
+add_filter('script_loader_tag', function ($tag, $handle, $src) {
+  if ('adobe-fonts-kit' === $handle && false === strpos($tag, ' async')) {
+    // <script ...> に async を追加
+    $tag = str_replace('<script ', '<script async ', $tag);
+  }
+  return $tag;
+}, 10, 3);
+
+// 4) <noscript> で CSS 埋め込みを追加（JS無効時でも表示）
+add_action('wp_head', function () {
+  $kit_id = defined('MY_ADOBE_KIT_ID') ? MY_ADOBE_KIT_ID : '';
+  if (! $kit_id) return;
+  // 公式「デフォルトの埋め込みコード」は CSS の <link>
+  // https://helpx.adobe.com/jp/fonts/using/embed-codes.html
+  printf(
+    "<noscript><link rel='stylesheet' href='https://use.typekit.net/%s.css'></noscript>\n",
+    esc_attr($kit_id)
+  );
+}, 6);
