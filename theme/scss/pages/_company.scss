@@ -7,6 +7,10 @@
 
 .company_page {
   padding: 115px 0 200px;
+
+  @include max-mq {
+    padding: 80px 0 100px;
+  }
 }
 
 .company_message {
@@ -53,12 +57,26 @@
       color: $color-blue1;
       text-align: right;
     }
+
+    @include max-mq {
+      gap: 40px;
+
+      p {
+        width: 100%;
+        margin-top: 0;
+        font-size: var(--fz18);
+        line-height: 1.6;
+        text-align: center;
+      }
+    }
   }
 
   @include max-mq {
     span {
       margin-bottom: 0;
     }
+
+
 
     .txt_animation_underup {
       p {
