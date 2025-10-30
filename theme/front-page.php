@@ -133,7 +133,7 @@
   <section class="top_about top_recruit">
     <div class="container">
       <div class="top_about--inner">
-        <div>
+        <div class="top_recruit--contents">
           <h2 class="ttl_sec">
             <span>採用情報</span>
             <div class="js_target">
@@ -152,7 +152,7 @@
             市場配送（定期便）や一般貨物配送、産地便・地場集荷まで、地域に根ざした多様なフィールドで活躍できます。私たちは、助け合いの心とチームワークを軸に、未経験からの挑戦を研修・同乗指導で支援し、資格取得費用補助で成長を後押しします。有給休暇取得率100％の働きやすい環境で、次の一歩を。
           </p>
           <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_driver.png" alt="ドライバー求人サイト ドラEVER" width="191" height="66" class="top_recruit--site">
-          <a href="<?php echo esc_url(home_url('/')); ?>">
+          <a href="https://doraever.jp/company/1252536">
             採用情報をドラEVERで見る
             <svg class="icon-arrow" width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M27 1L32 6L27 11" stroke="currentColor" />
@@ -160,7 +160,7 @@
             </svg>
           </a>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/top/about.png" alt="" width="547" height="456">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/top/recruit.png" alt="" width="726" height="505">
       </div>
     </div>
   </section>
