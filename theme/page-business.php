@@ -58,6 +58,7 @@
               <p>e</p>
             </div>
           </h2>
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_concept.jpg" alt="" width="658" height="612" class="business_concept--img_sp">
           <p class="business_concept--lead">私たちが大切にする<br class="is-hidden_pc"><span>4</span>つの価値観</p>
           <ul>
             <li> <img src="<?php echo get_template_directory_uri(); ?>/img/business/values_01.png" alt="" width="127" height="127"></li>
@@ -70,7 +71,7 @@
             株式会社河合商店は、社員一人ひとりの個性とチームワークを大切に、東海エリアを中心に青果物・一般貨物の地場〜中距離配送を行う運送会社です。肩書より信頼、役職より現場。互いの「できる」を持ち寄って、日々の仕事に誠実さと誇りを込めています。「何のために働くのか」。私たちは、社員それぞれが働く意味を見つけられる場所でありたいと考えています。 小さな現場の積み重ねが、地域の“当たり前”を支えている。その実感を、チーム全員で分かち合える会社へ。お客様の「当たり前」を支えるために、安全最優先・品質第一で日々の輸送に取り組んでいます。
           </p>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_concept.jpg" alt="" width="658" height="612" class="business_concept--img">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_concept.jpg" alt="" width="658" height="612" class="business_concept--img_pc">
       </div>
     </div>
   </section>

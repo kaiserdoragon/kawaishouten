@@ -7,6 +7,10 @@
 
 .business_page {
   padding: 180px 0 210px;
+
+  @include max-mq {
+    padding: 100px 0 130px;
+  }
 }
 
 .business_concept {
@@ -146,6 +150,10 @@
     @media (width <= 1280px) {
       gap: 5vw;
     }
+
+    @include tb-mq {
+      display: block;
+    }
   }
 
   // .business_concept--lead
@@ -164,6 +172,12 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
+    @include tb-mq {
+      margin-top: 0;
+      margin-bottom: 25px;
+      line-height: 1;
+    }
   }
 
   // .business_concept--txt
@@ -174,14 +188,70 @@
   // .business_concept--content
   &--content {
     width: 50%;
+
+    @media (width <= 1280px) {
+      width: 60%;
+    }
+
+    @include tb-mq {
+      width: 100%;
+    }
+
+    @include max-mq {
+      ul {
+        gap: 0;
+        row-gap: 20px;
+        column-gap: 20px;
+        margin: 0 auto 30px;
+      }
+
+      li {
+        width: 32%;
+
+        &:nth-child(2n+1) {
+          text-align: right;
+        }
+      }
+    }
   }
 
   // .business_concept--img
-  &--img {
+  &--img_pc {
     width: 40%;
+
+    @media (width <= 1280px) {
+      width: 30%;
+    }
 
     @include tb-mq {
       display: none;
+    }
+  }
+
+  // .business_concept--img
+  &--img_sp {
+    display: none;
+
+    @include tb-mq {
+      display: block;
+      width: 62%;
+      margin: 25px auto 30px;
+    }
+  }
+
+  @include tb-mq {
+    .ttl_sec {
+      width: fit-content;
+      margin: auto;
+    }
+  }
+
+  @include max-mq {
+    .txt_animation_underup {
+      p {
+        font-size: var(--fz58);
+        -webkit-text-stroke-width: 3px;
+      }
     }
   }
 }
@@ -364,6 +434,7 @@
   }
 
   ol {
+    flex-wrap: wrap;
     max-width: 100%;
   }
 
