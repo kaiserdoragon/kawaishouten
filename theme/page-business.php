@@ -39,7 +39,7 @@
   <section class="business_concept">
     <div class="container">
       <div class="business_concept--inner">
-        <div>
+        <div class="business_concept--content">
           <h2 class="ttl_sec">
             <span>私達のコンセプト</span>
             <div class="js_target">
@@ -59,12 +59,18 @@
             </div>
           </h2>
           <p class="business_concept--lead">私たちが大切にする<br class="is-hidden_pc"><span>4</span>つの価値観</p>
+          <ul>
+            <li> <img src="<?php echo get_template_directory_uri(); ?>/img/business/values_01.png" alt="" width="127" height="127"></li>
+            <li> <img src="<?php echo get_template_directory_uri(); ?>/img/business/values_02.png" alt="" width="127" height="127"></li>
+            <li> <img src="<?php echo get_template_directory_uri(); ?>/img/business/values_03.png" alt="" width="127" height="127"></li>
+            <li> <img src="<?php echo get_template_directory_uri(); ?>/img/business/values_04.png" alt="" width="127" height="127"></li>
+          </ul>
           <strong>できるを活かし、<br class="is-hidden_pc">連携の力で約束に応える。</strong>
           <p class="business_concept--txt">
             株式会社河合商店は、社員一人ひとりの個性とチームワークを大切に、東海エリアを中心に青果物・一般貨物の地場〜中距離配送を行う運送会社です。肩書より信頼、役職より現場。互いの「できる」を持ち寄って、日々の仕事に誠実さと誇りを込めています。「何のために働くのか」。私たちは、社員それぞれが働く意味を見つけられる場所でありたいと考えています。 小さな現場の積み重ねが、地域の“当たり前”を支えている。その実感を、チーム全員で分かち合える会社へ。お客様の「当たり前」を支えるために、安全最優先・品質第一で日々の輸送に取り組んでいます。
           </p>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_concept.jpg" alt="" width="658" height="612">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_concept.jpg" alt="" width="658" height="612" class="business_concept--img">
       </div>
     </div>
   </section>
@@ -171,28 +177,28 @@
       </p>
       <ol>
         <li class="is_fadein">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/top/business01.png" alt="" width="320" height="220" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_quality_01.png" alt="" width="320" height="220" alt="">
           <dl>
             <dt>運行情報システム／<br class="is-hidden_pc">管理システムの導入</dt>
             <dd>ドラEVER「運SOUL」を活用して、車両管理及び乗務員の管理の一元化アプリを利用して車両の運行状況、貨物追跡等 正確且つ安全な運行管理を実施しています。</dd>
           </dl>
         </li>
         <li class="is_fadein">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/top/business02.png" alt="" width="320" height="220" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_quality_02.png" alt="" width="320" height="220" alt="">
           <dl>
             <dt>庫内温度監視</dt>
             <dd>冷凍冷蔵車には、庫内温度監視システム「おんどとり」を装備して生鮮食料品などの輸送の温度管理をしています。</dd>
           </dl>
         </li>
         <li class="is_fadein">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/top/business03.png" alt="" width="320" height="220" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_quality_03.png" alt="" width="320" height="220" alt="">
           <dl>
             <dt>アルコール検査</dt>
             <dd>運転者にアルコールチェッカーを使用し始業前、始業後にアルコール検査を実施しています。</dd>
           </dl>
         </li>
         <li class="is_fadein">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/top/business04.png" alt="" width="320" height="220" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_quality_04.png" alt="" width="320" height="220" alt="">
           <dl>
             <dt>教育プログラム</dt>
             <dd>運行管理者、整備管理者による、定期的な社内教育に取り組んでいます。初任者運転車講習、運行管理者基礎講習 運転者への適性診断の実施</dd>

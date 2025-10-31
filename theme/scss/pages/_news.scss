@@ -6,8 +6,13 @@
 // ---------------------------------------------
 
 .news_page {
-  padding-top: 110px;
-  margin-bottom: 100px;
+  padding-top: 160px;
+  margin-bottom: 200px;
+
+  @include max-mq {
+    padding-top: 80px;
+    margin-bottom: 100px;
+  }
 }
 
 .news_archive {
@@ -246,7 +251,6 @@
     gap: 20px;
   }
 }
-
 
 .single_contents {
   // .single_contents--ttl

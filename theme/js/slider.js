@@ -1,28 +1,21 @@
 const swiper = new Swiper(".swiper_business", {
-  // ベース（= 765px以下）
-  slidesPerView: "auto",
-  spaceBetween: 20,
-  speed: 1500,
-  slidesPerView: 1.2,
-  pagination: { el: ".swiper-pagination", clickable: true },
-  autoplay: { delay: 2000 },
+  // --- 767px以下のデフォルト設定 (スマホ用の設定) ---
+  slidesPerView: 1.5,  // 例: スマホでは1.5枚表示
+  spaceBetween: 20,     // 例: スマホではスペースを20pxに
   loop: true,
-  freeMode: { enabled: true, sticky: true },
-  grabCursor: true,
+  centeredSlides: true,
+  speed: 3000,
+  initialSlide: 0,
+  pagination: { el: ".swiper-pagination", clickable: true },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
-    766: {
-      // 766px以上（PC）
-      loop: true,
-      centeredSlides: true,
-      speed: 3000,
-      slidesPerView: 3.8,
-      initialSlide: 0,
-      spaceBetween: 50,
-      // freeModeを無効化したい場合
-      freeMode: { enabled: false },
-      pagination: { el: ".swiper-pagination", clickable: true },
-      autoplay: { delay: 5000 },
-    },
-  },
+    768: {
+      slidesPerView: 3.8,  // PC用の設定 (元の値)
+      spaceBetween: 50,     // PC用の設定 (元の値)
+    }
+  }
 });

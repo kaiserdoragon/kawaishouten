@@ -26,7 +26,7 @@
   .ttl_sec {
     position: absolute;
     bottom: 40px;
-    left: 25px;
+    left: 0;
     line-height: 1.2;
     color: #fff;
     -webkit-text-stroke-width: 7px;
@@ -56,7 +56,7 @@
 }
 
 .top_about {
-  padding: 100px 0 80px;
+  padding: 150px 0 160px;
 
   span {
     display: flex;
@@ -197,6 +197,10 @@
 
     @media (width <= 1450px) {
       gap: 40px;
+    }
+
+    @media (width <= 1280px) {
+      align-items: center;
     }
 
     @include tb-mq {
@@ -398,7 +402,7 @@
     align-items: center;
     width: 100%;
     max-width: 1580px;
-    padding: 1.4583333333vw 0 1.4583333333vw 6%;
+    padding: 1.4583333333vw 0 1.4583333333vw 87px;
     margin: auto;
     background: #fff;
     border-radius: 30px;
@@ -445,7 +449,7 @@
   &--contents {
     display: flex;
     flex-wrap: wrap;
-    gap: 3%;
+    gap: 58px;
     align-items: center;
 
     @media (961px <= width <= 1280px) {
