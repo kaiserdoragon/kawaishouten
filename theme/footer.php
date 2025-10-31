@@ -1,7 +1,7 @@
 <footer class="footer">
     <p class="footer--logo">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/common/footer_logo.svg" alt="株式会社河合商店" width="253" height="61">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/common/footer_logo.png" alt="株式会社河合商店" width="253" height="61">
         </a>
     </p>
     <ul>

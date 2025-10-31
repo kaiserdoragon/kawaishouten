@@ -60,7 +60,7 @@
           </div>
         </h2>
         <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_driver.png" alt="ドライバー求人サイト ドラEVER" width="191" height="66">
-        <a href="<?php echo esc_url(home_url('/')); ?>">
+        <a href="https://doraever.jp/company/1252536">
           採用情報をドラEVERで見る
           <svg class="icon-arrow" width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M27 1L32 6L27 11" stroke="currentColor" />
@@ -68,10 +68,8 @@
           </svg>
         </a>
       </div>
-      <div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/contact/img_catch_01.jpg" alt="" width="154" height="202">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/contact/img_catch_02.jpg" alt="" width="154" height="202">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/contact/img_catch_03.jpg" alt="" width="154" height="202">
+      <div class="contact_catch--img">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/contact/img_catch.png" alt="" width="503" height="202">
       </div>
     </div>
   </section>
