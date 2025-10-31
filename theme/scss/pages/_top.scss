@@ -1131,6 +1131,10 @@
     }
   }
 
+  @media (width <= 1450px) {
+    padding: 100px 0;
+  }
+
   @media (width <= 1280px) {
     br {
       display: none;
@@ -1262,7 +1266,8 @@
     display: block;
     width: 191px !important;
     height: 66px;
-    margin: 0 0 0 auto;
+    margin: 0 0 25px auto;
+    object-fit: contain;
 
     @media (width <= 1280px) {
       margin: 0 0 15px auto;

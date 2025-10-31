@@ -12,7 +12,7 @@
             <a href="<?php echo esc_url(home_url('/business')); ?>"><span>Business</span>事業内容と取り組み</a>
         </li>
         <li <?php if (is_page('recruit')): ?> class="is_current" <?php endif; ?>>
-            <a href="<?php echo esc_url(home_url('/recruit')); ?>"><span>Recruit</span>採用情報</a>
+            <a href="https://doraever.jp/company/1252536"><span>Recruit</span>採用情報</a>
         </li>
         <li <?php if (is_page('company')): ?> class="is_current" <?php endif; ?>>
             <a href="<?php echo esc_url(home_url('/company')); ?>"><span>Company</span>会社概要</a>
@@ -24,7 +24,7 @@
             <a class="header--link" href="<?php echo esc_url(home_url('/contact')); ?>"><span>Contact</span>お問い合わせ</a>
         </li>
     </ul>
-    <small>http//yexttexttttexxxt.@text</small>
+    <small>© 2025 河合商店 All Rights Reserved.</small>
 </footer>
 </div>
 <?php wp_footer(); ?>

@@ -87,6 +87,15 @@
 }
 
 .company_overview {
+  .txt_animation_underup {
+    p {
+      &:nth-child(4),
+      &:nth-child(6), {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
   // .company_overview--gmap
   &--gmap {
     iframe {

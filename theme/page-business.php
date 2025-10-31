@@ -188,7 +188,7 @@
     </div>
   </section>
 
-  <section class=" top_business business_safety">
+  <section class="top_business business_safety">
     <div class="container">
       <h2>品質・安全・法令遵守</h2>
       <p>
@@ -229,7 +229,7 @@
 
   <section class="business_days">
     <h2 class="ttl_sec">
-      <span>河合商店の日々</span>
+      <span class="business_days--txt">河合商店の日々</span>
       <div class="js_target">
         <p>L</p>
         <p>i</p>
@@ -267,39 +267,38 @@
         <p>t</p>
       </div> -->
     </h2>
-  </section>
-
-  <div class="swiper_business--wrap">
-    <div class="swiper_business swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide01.png" alt="" width="450" height="337">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide02.png" alt="" width="450" height="337">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide03.png" alt="" width="450" height="337">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide04.png" alt="" width="450" height="337">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide05.png" alt="" width="450" height="337">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide06.png" alt="" width="450" height="337">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide07.png" alt="" width="450" height="337">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide08.png" alt="" width="450" height="337">
+    <div class="swiper_business--wrap">
+      <div class="swiper_business swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide01.png" alt="" width="450" height="337">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide02.png" alt="" width="450" height="337">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide03.png" alt="" width="450" height="337">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide04.png" alt="" width="450" height="337">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide05.png" alt="" width="450" height="337">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide06.png" alt="" width="450" height="337">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide07.png" alt="" width="450" height="337">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/slide08.png" alt="" width="450" height="337">
+          </div>
         </div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
+  </section>
 
 </main>
 
