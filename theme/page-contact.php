@@ -36,7 +36,7 @@
 <?php $slug_name = $post->post_name; ?>
 <main class="<?php echo $slug_name; ?>_page">
   <div class="contact_lead">
-    <img src="../wp-content/themes/theme/img/common/header_logo.svg" alt="株式会社河合商店" width="470" height="112">
+    <img src="../wp-content/themes/theme/img/common/header_logo.png" alt="株式会社河合商店" width="470" height="112">
     <div class="contact_lead--number">
       <p>TEL：0568-48-0600</p>
       <p>FAX：0568-48-0601</p>
