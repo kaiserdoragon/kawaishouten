@@ -82,39 +82,57 @@
       <h2 class="ttl_sec">
         <div class="js_target">
           <p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_c.svg" alt="C" width="116" height="130">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_o_1.svg" alt="O" width="" height="">
           </p>
           <p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_o.svg" alt="O" width="121" height="130">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_n_1.svg" alt="n" width="" height="">
           </p>
           <p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_m.svg" alt="M" width="135" height="124">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_t_1.svg" alt="T" width="" height="">
           </p>
           <p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_p.svg" alt="P" width="100" height="125">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_i.svg" alt="i" width="" height="">
           </p>
           <p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_a.svg" alt="A" width="128" height="125">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_m_1.svg" alt="m" width="" height="">
           </p>
           <p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_n.svg" alt="N" width="112" height="125">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_e_1.svg" alt="e" width="" height="">
           </p>
           <p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/txt_y.svg" alt="Y" width="123" height="125">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_dot_1.svg" alt="" width="" height="">
           </p>
-          <p>O</p>
-          <p>v</p>
-          <p>e</p>
-          <p>r</p>
-          <p>V</p>
-          <p>i</p>
-          <p>e</p>
-          <p>w</p>
-          <p>.</p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_o_2.svg" alt="O" width="" height="">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_n_2.svg" alt="n" width="" height="">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_t_2.svg" alt="T" width="" height="">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_e_2.svg" alt="e" width="" height="">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_m_2.svg" alt="m" width="" height="">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_p.svg" alt="p" width="" height="">
+          </p>
+          <p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/business/txt_dot_2.svg" alt="" width="" height="">
+          </p>
         </div>
       </h2>
       <p class="business_possible--lead">青果・食品に強い。<br>時間と温度にこだわる配送。</p>
+      <ul>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/img/business/service01.png" alt="" width="174" height="173"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/img/business/service02.png" alt="" width="174" height="173"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/img/business/service03.png" alt="" width="174" height="173"></li>
+      </ul>
       <p class="business_possible--train">車両：<br class="is-hidden_pc">ウィング車／冷蔵車／保冷車（計7台）<br class="is-hidden_pc"><img src="<?php echo get_template_directory_uri(); ?>/img/business/img_parallelogram.png" alt="" width="60" height="30"></p>
+
       <table>
         <tr>
           <th>対象/用途</th>
@@ -137,30 +155,30 @@
           <td>定期／スポット／チャーター</td>
         </tr>
       </table>
-      <ol>
+      <ol class="business_possible--list">
         <li>
-          <img src=" " alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/catch_01.png" alt="" width="320" height="220">
           <dl>
             <dt>市場配送（定期便）</dt>
             <dd>東海エリアの市場・大手スーパー向けに定期ルートで安定運行。発注リズムに合わせて配車・時刻管理を行い、遅配ゼロを目標に運行管理。</dd>
           </dl>
         </li>
         <li>
-          <img src=" " alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/catch_02.png" alt="" width="320" height="220">
           <dl>
             <dt>一般貨物配送（BtoB）</dt>
             <dd>大手運送会社等との連携を含む企業間配送。雑貨・工業製品など幅広い品目に対応。手積み／パレット輸送／フォークリフトに対応。</dd>
           </dl>
         </li>
         <li>
-          <img src=" " alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/catch_03.png" alt="" width="320" height="220">
           <dl>
             <dt>産地便（関東・関西）</dt>
             <dd>産地〜市場・センター間の中距離輸送。青果物など鮮度重視の荷扱いで、納品時間・温度帯の指定に柔軟対応。</dd>
           </dl>
         </li>
         <li>
-          <img src=" " alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/business/catch_04.png" alt="" width="320" height="220">
           <dl>
             <dt>地場集荷</dt>
             <dd>名古屋近郊を中心に集荷→仕分け→納品をワンストップ。スポット／チャーターのご相談も可能。</dd>
@@ -170,7 +188,7 @@
     </div>
   </section>
 
-  <section class="top_business business_safety">
+  <section class=" top_business business_safety">
     <div class="container">
       <h2>品質・安全・法令遵守</h2>
       <p>
@@ -212,7 +230,7 @@
   <section class="business_days">
     <h2 class="ttl_sec">
       <span>河合商店の日々</span>
-      <div class="js_target is-hidden_sp">
+      <div class="js_target">
         <p>L</p>
         <p>i</p>
         <p>f</p>
@@ -232,7 +250,7 @@
         <p>n</p>
         <p>.</p>
       </div>
-      <div class="js_target is-hidden_pc">
+      <!-- <div class="js_target is-hidden_pc">
         <p>L</p>
         <p>i</p>
         <p>f</p>
@@ -247,9 +265,10 @@
         <p>e</p>
         <p>a</p>
         <p>t</p>
-      </div>
+      </div> -->
     </h2>
   </section>
+
   <div class="swiper_business--wrap">
     <div class="swiper_business swiper">
       <div class="swiper-wrapper">

@@ -130,7 +130,8 @@ main {
 
     @include tb-mq {
       width: fit-content;
-      padding: 10px 50px;
+      padding: 10px 75px 10px 65px;
+      background: url(../img/common/search.svg) no-repeat right 22% center / 29px, 24px, #fff;
     }
 
     @include max-mq {
@@ -282,6 +283,8 @@ main {
 
   @media (width <= 1280px) {
     ul {
+      gap: 20px;
+
       &::after {
         right: -17px;
       }
@@ -379,6 +382,8 @@ main {
 
   .header--link {
     width: 235px;
+    padding: 10px 30px 10px 10px;
+    background: url(../img/common/search.svg) no-repeat right 23% center / 29px, 24px, #fff;
   }
 
   &::before {
@@ -407,7 +412,13 @@ main {
   }
 
   @include max-mq {
+    .header--link {
+      width: 180px;
+      background: url(../img/common/search.svg) no-repeat right 15% center / 29px, 24px, #fff;
+    }
+
     ul {
+      gap: 24px;
       padding: 50px 0;
     }
   }

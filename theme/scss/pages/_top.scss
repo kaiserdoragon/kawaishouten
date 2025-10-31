@@ -251,7 +251,7 @@
     }
 
     .txt_animation_underup {
-      margin-bottom: 20px;
+      margin: 0 0 20px;
 
       p {
         font-size: 15vw;
@@ -752,12 +752,13 @@
       font-size: var(--fz20);
     }
 
-
     a {
       margin: 60px auto 0;
     }
 
     .txt_animation_underup {
+      margin: 0 0 20px;
+
       p {
         font-size: 15vw;
         line-height: 1;
@@ -1170,6 +1171,8 @@
     }
 
     .txt_animation_underup {
+      margin: 0 0 20px;
+
       p {
         font-size: 14vw;
         line-height: 1.1;
