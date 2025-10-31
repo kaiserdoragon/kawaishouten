@@ -22,7 +22,7 @@
 
   // .company_message--inner
   &--inner {
-    padding: 50px 0;
+    padding: 50px min(4vw, 25px);
     background: #eff8ff;
   }
 
@@ -60,11 +60,16 @@
 
     @include max-mq {
       gap: 40px;
+      padding: 50px min(4vw, 25px);
+
+      img {
+        width: 80%;
+      }
 
       p {
         width: 100%;
         margin-top: 0;
-        font-size: var(--fz18);
+        font-size: var(--fz16);
         line-height: 1.6;
         text-align: center;
       }
@@ -87,11 +92,206 @@
 }
 
 .company_overview {
+  h3 {
+    margin-bottom: 60px;
+    font-size: var(--fz32);
+    font-weight: 500;
+    color: $color-blue1;
+    text-align: center;
+  }
+
   .txt_animation_underup {
+    margin: 0 0 40px !important;
+
     p {
       &:nth-child(4),
       &:nth-child(6), {
         margin-right: 0 !important;
+      }
+
+      &:nth-child(7) {
+        margin-right: 25px !important;
+      }
+    }
+
+    &::before {
+      margin-right: 80px !important;
+    }
+
+    &::after {
+      margin-left: 80px !important;
+    }
+  }
+
+  // .company_overview--info
+  &--info {
+    box-sizing: border-box;
+    width: min(1050px, 100%); // デザインの幅 + padding
+    padding: 0 min(4vw, 25px);
+    margin: auto;
+
+    div {
+      display: flex;
+      gap: 2.34375vw;
+      align-items: center;
+      width: 45%;
+
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(8) {
+        dd {
+          line-height: 1.2;
+        }
+      }
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        width: 90%;
+      }
+    }
+
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 30px;
+      justify-content: center;
+      margin-bottom: 130px;
+    }
+
+    dt {
+      width: 140px;
+      padding: 5px 0;
+      font-size: var(--fz24);
+      color: #fff;
+      text-align: center;
+      background: #001f63;
+      border-radius: 10px;
+    }
+
+    dd {
+      font-size: var(--fz20);
+      letter-spacing: 0.1em;
+    }
+
+    @include tb-mq {
+      div {
+        width: 50%;
+
+        &:nth-child(7),
+        &:nth-child(8) {
+          width: 100%;
+        }
+      }
+    }
+
+    @include max-mq {
+      width: 100%;
+
+      dl {
+        flex-direction: column;
+        row-gap: 15px;
+        width: fit-content;
+        margin: 0 auto 80px;
+      }
+
+      dt,
+      dd {
+        font-size: var(--fz16);
+      }
+
+      dt {
+        width: 90px;
+      }
+
+      div {
+        gap: 20px;
+        width: 100%;
+      }
+    }
+  }
+
+  // .company_overview--history
+  &--history {
+    h3 {
+      margin-bottom: 60px;
+      font-size: var(--fz32);
+      font-weight: 500;
+      color: $color-blue1;
+      text-align: center;
+    }
+
+    dl {
+      position: relative;
+      width: 50%;
+      margin: 0 auto 160px;
+
+      &::after {
+        position: absolute;
+        top: 8px;
+        left: 119px;
+        width: 1px;
+        height: 110%;
+        content: "";
+        border-left: 2px dashed $color-blue1;
+      }
+    }
+
+    dt {
+      position: relative;
+      float: left;
+      margin: 0 80px 40px 0;
+      font-weight: bold;
+      color: $color-blue1;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: -45px;
+        display: block;
+        width: 15px;
+        height: 15px;
+        content: "";
+        background: $color-blue1;
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    dd {
+      margin: 0 0 40px;
+      font-weight: 500;
+    }
+
+    @include max-mq {
+      h3 {
+        margin-bottom: 30px;
+        font-size: var(--fz24);
+      }
+
+      dl {
+        width: 100%;
+        margin: 0 auto 90px;
+
+        &::after {
+          left: 4px;
+        }
+      }
+
+      dt {
+        float: none;
+        margin: 0 0 0 20px;
+
+        &::after {
+          right: auto;
+          left: -20px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      dd {
+        margin: 0 0 30px 20px;
+        font-size: var(--fz14);
       }
     }
   }
@@ -105,6 +305,28 @@
       height: auto;
       aspect-ratio: 1277 / 514;
       margin: auto;
+    }
+
+    @include max-mq {
+      iframe {
+        aspect-ratio: 320 / 350;
+      }
+    }
+  }
+
+  @media (width <= 1280px) {
+    .txt_animation_underup {
+      p {
+        line-height: 1.3 !important;
+      }
+
+      &::before {
+        margin-right: 30px !important;
+      }
+
+      &::after {
+        margin-left: 30px !important;
+      }
     }
   }
 }
