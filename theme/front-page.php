@@ -32,7 +32,7 @@
         <p class="loop_text">DRIVEN BY TRUST</p>
       </div>
     </h2>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv.jpg" alt="" width="1920" height="1025">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv.jpg" alt="" width="1920" height="1025" fetchpriority="high">
   </div>
 
   <section class="top_about">

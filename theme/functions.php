@@ -34,6 +34,36 @@ add_action('wp_enqueue_scripts', 'removed_scripts_styles');
 
 
 /*------------------------------------*\
+	絵文字無効化
+\*------------------------------------*/
+add_action('init', function () {
+  remove_action('wp_head', 'print_emoji_detection_script', 7);
+  remove_action('wp_print_styles', 'print_emoji_styles');
+  remove_action('admin_print_scripts', 'print_emoji_detection_script');
+  remove_action('admin_print_styles', 'print_emoji_styles');
+  add_filter('tiny_mce_plugins', function ($plugins) {
+    return is_array($plugins) ? array_diff($plugins, ['wpemoji']) : [];
+  });
+  add_filter('wp_mail', 'wp_staticize_emoji_for_email'); // 必要なら外す
+});
+
+/*------------------------------------*\
+	oEmbed のJS（wp-embed.min.js）を読み込ませない
+\*------------------------------------*/
+add_action('wp_footer', function () {
+  wp_dequeue_script('wp-embed');
+}, 100);
+
+/*------------------------------------*\
+	管理用アイコン（dashicons）をフロントで読み込まない
+\*------------------------------------*/
+add_action('wp_enqueue_scripts', function () {
+  if (! is_user_logged_in()) {
+    wp_deregister_style('dashicons');
+  }
+});
+
+/*------------------------------------*\
 Gutenberg用のCSSを読み込まない
 \*------------------------------------*/
 
