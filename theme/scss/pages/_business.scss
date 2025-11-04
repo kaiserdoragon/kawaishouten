@@ -161,7 +161,7 @@
     margin-top: -10px;
     font-size: var(--fz32);
     font-weight: bold;
-    color: #001f63;
+    color: $color-blue1;
     text-align: center;
     letter-spacing: 0.15em;
 
@@ -324,19 +324,14 @@
   }
 
   dl {
-    border-bottom: 1px dashed #001f63;
+    height: 100%;
+    border-bottom: 1px dashed $color-blue1;
   }
 
   dt {
     margin-bottom: 20px;
     font-size: var(--fz20);
     font-weight: 500;
-  }
-
-  dd {
-    font-weight: 500;
-    line-height: 1.8;
-    color: #777;
   }
 
   ul {
@@ -439,7 +434,7 @@
 
   // .business_possible--lead
   &--lead {
-    margin: 50px 0 30px;
+    margin: 40px 0 30px;
     font-size: var(--fz32);
     font-weight: bold;
     line-height: 1.7;
@@ -485,8 +480,38 @@
     li {
       display: flex;
       gap: 45px;
+      align-items: flex-start;
       justify-content: center;
-      width: min(700px, 100%);
+      width: 48%;
+    }
+
+    @media (width <= 1450px) {
+      row-gap: 40px;
+      column-gap: 40px;
+
+      li {
+        gap: 20px;
+      }
+
+      img {
+        width: 40%;
+      }
+    }
+
+    @media (width <= 1280px) {
+      li {
+        width: 43%;
+      }
+    }
+
+    @include tb-mq {
+      li {
+        width: 100%;
+      }
+
+      img {
+        width: 30%;
+      }
     }
 
     @include max-mq {
@@ -558,6 +583,12 @@
     }
   }
 
+  @media (1025px <= width <= 1280px) {
+    dd {
+      margin-bottom: 20px;
+    }
+  }
+
   @include max-mq {
     padding: 0 0 60px;
 
@@ -626,7 +657,7 @@
     margin-bottom: 25px;
     font-size: var(--fz35);
     font-weight: bold;
-    color: #001f63;
+    color: $color-blue1;
     letter-spacing: 0.15em;
   }
 
@@ -811,7 +842,7 @@
       transform: translateY(2em);
       animation: textanimationlower 1s forwards;
       -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: #001f63;
+      -webkit-text-stroke-color: $color-blue1;
 
       &:nth-child(1) {
         animation-delay: 0.2s;
@@ -908,7 +939,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: #001f63 !important;
+  background: $color-blue1 !important;
 }
 
 .swiper-pagination-bullet {
