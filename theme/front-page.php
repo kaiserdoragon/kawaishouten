@@ -247,7 +247,7 @@
           <p>w</p>
           <p>.</p>
         </div>
-        <span>企業紹介</span>
+        <span>会社概要</span>
       </h2>
       <div class="top_company--contents">
         <img src="<?php echo get_template_directory_uri(); ?>/img/top/company.jpg" alt="株式会社河合商店" width="919" height="670">
