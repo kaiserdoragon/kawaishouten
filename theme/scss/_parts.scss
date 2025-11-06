@@ -208,6 +208,7 @@ table {
 
   @include max-mq {
     p {
+      padding-left: 0;
       font-size: var(--fz75);
     }
   }

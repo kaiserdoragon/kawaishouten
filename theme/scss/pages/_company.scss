@@ -58,6 +58,12 @@
       text-align: right;
     }
 
+    @include tb-mq {
+      p {
+        width: 100%;
+      }
+    }
+
     @include max-mq {
       gap: 40px;
       padding: 50px min(4vw, 25px);
@@ -132,9 +138,9 @@
 
     div {
       display: flex;
-      gap: 2.34375vw;
+      gap: 45px;
       align-items: center;
-      width: 45%;
+      width: 46%;
 
       &:nth-child(4),
       &:nth-child(7),
@@ -146,7 +152,7 @@
 
       &:nth-child(7),
       &:nth-child(8) {
-        width: 90%;
+        width: 91%;
       }
     }
 
@@ -190,7 +196,6 @@
       dl {
         flex-direction: column;
         row-gap: 15px;
-        width: fit-content;
         margin: 0 auto 80px;
       }
 
@@ -206,6 +211,26 @@
       div {
         gap: 20px;
         width: 100%;
+
+        &:nth-child(4) {
+          order: 5;
+        }
+
+        &:nth-child(5) {
+          order: 4;
+        }
+
+        &:nth-child(6) {
+          order: 6;
+        }
+
+        &:nth-child(7) {
+          order: 7;
+        }
+
+        &:nth-child(8) {
+          order: 8;
+        }
       }
     }
   }
@@ -326,6 +351,18 @@
 
       &::after {
         margin-left: 30px !important;
+      }
+    }
+  }
+
+  @include tb-mq {
+    .txt_animation_underup {
+      margin: 0 !important;
+
+      p {
+        &:nth-child(7) {
+          margin-right: 0 !important;
+        }
       }
     }
   }

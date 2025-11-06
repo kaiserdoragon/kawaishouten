@@ -63,7 +63,7 @@
   <section class="business_days company_overview">
     <h2 class="ttl_sec">
       <span class="business_days--txt">会社概要</span>
-      <div class="js_target">
+      <div class="js_target is-hidden_sp">
         <p>C</p>
         <p>o</p>
         <p>m</p>
@@ -71,6 +71,25 @@
         <p>a</p>
         <p>n</p>
         <p>y</p>
+        <p>O</p>
+        <p>v</p>
+        <p>e</p>
+        <p>r</p>
+        <p>v</p>
+        <p>i</p>
+        <p>e</p>
+        <p>w</p>
+      </div>
+      <div class="js_target is-hidden_pc">
+        <p>C</p>
+        <p>o</p>
+        <p>m</p>
+        <p>p</p>
+        <p>a</p>
+        <p>n</p>
+        <p>y</p>
+      </div>
+      <div class="js_target_lower is-hidden_pc">
         <p>O</p>
         <p>v</p>
         <p>e</p>

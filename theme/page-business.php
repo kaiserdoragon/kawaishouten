@@ -144,7 +144,7 @@
         </tr>
         <tr>
           <th>温度帯</th>
-          <td>冷蔵０〜１０℃／保冷）</td>
+          <td>冷蔵０〜１０℃／保冷</td>
         </tr>
         <tr>
           <th>積付け形態</th>
@@ -230,7 +230,7 @@
   <section class="business_days">
     <h2 class="ttl_sec">
       <span class="business_days--txt">河合商店の日々</span>
-      <div class="js_target">
+      <div class="js_target is-hidden_sp">
         <p>L</p>
         <p>i</p>
         <p>f</p>
@@ -250,7 +250,7 @@
         <p>n</p>
         <p>.</p>
       </div>
-      <!-- <div class="js_target is-hidden_pc">
+      <div class="js_target is-hidden_pc">
         <p>L</p>
         <p>i</p>
         <p>f</p>
@@ -259,13 +259,18 @@
         <p>t</p>
       </div>
       <div class="js_target_lower is-hidden_pc">
-        <p>L</p>
-        <p>i</p>
-        <p>f</p>
-        <p>e</p>
+        <p>K</p>
         <p>a</p>
+        <p>w</p>
+        <p>a</p>
+        <p>i</p>
+        <p>S</p>
+        <p>h</p>
+        <p>o</p>
         <p>t</p>
-      </div> -->
+        <p>e</p>
+        <p>n</p>
+      </div>
     </h2>
     <div class="swiper_business--wrap">
       <div class="swiper_business swiper">
