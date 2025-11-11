@@ -138,36 +138,74 @@ if (function_exists('add_theme_support')) {
 \*------------------------------------*/
 
 add_action('wp_enqueue_scripts', function () {
-  $uri = get_template_directory_uri();
-  $dir = get_stylesheet_directory();
+  $uri  = function ($file) {
+    return get_theme_file_uri($file);
+  };
+  $path = function ($file) {
+    return get_theme_file_path($file);
+  };
+  $ver  = function ($file) use ($path) {
+    $p = $path($file);
+    return file_exists($p) ? (string) filemtime($p) : null;
+  };
 
-  wp_enqueue_style('theme', $uri . '/style.css', [], @filemtime($dir . '/style.css'));
-  wp_enqueue_style('reset', $uri . '/css/reset.css', ['theme'], @filemtime($dir . '/css/reset.css'));
+  wp_enqueue_style(
+    'reset',
+    $uri('/css/reset.css'),
+    [],                                 // 依存なし（先頭で読む）
+    $ver('/css/reset.css')
+  );
 
-  wp_enqueue_style('swipercss', $uri . '/css/swiper-bundle.min.css', [], null);
-  wp_enqueue_style('custom',    $uri . '/css/style.css', ['theme'], @filemtime($dir . '/css/style.css'));
+  wp_enqueue_style(
+    'theme',
+    $uri('/style.css'),
+    ['reset'],                           // テーマはリセットに依存
+    $ver('/style.css')
+  );
+
+  wp_enqueue_style(
+    'custom',
+    $uri('/css/style.css'),
+    ['theme'],                           // カスタムはテーマに依存
+    $ver('/css/style.css')
+  );
+
+  wp_enqueue_style(
+    'swipercss',
+    $uri('/css/swiper-bundle.min.css'),
+    [],                                // 依存なし
+    $ver('/css/swiper-bundle.min.css')
+  );
 }, 5);
 
+// ===== type='text/css' を削除（任意・微小な省バイト）=====
 add_filter('style_loader_tag', function ($tag) {
   return preg_replace('~\s+type=["\'][^"\']++["\']~', '', $tag);
 }, 9);
 
-
+// ===== 非クリティカルCSSを非ブロッキング化（プリロード + noscript）=====
 add_filter('style_loader_tag', function ($html, $handle, $href, $media) {
   if (is_admin()) return $html;
 
-  $preload_handles = ['swipercss', 'custom'];
+  // 本当に初期描画に必要なものだけを列挙
+  // 例: "custom" はUI調整が多く初期描画に関与しがち
+  $preload_handles = ['custom'];
 
-  if (!in_array($handle, $preload_handles, true)) return $html;
+  if (!in_array($handle, $preload_handles, true)) {
+    return $html; // それ以外は通常のブロッキングCSSとして読み込み
+  }
 
   $orig  = trim($html);
   $href  = esc_url($href);
   $id    = esc_attr("{$handle}-css");
   $media = $media ? ' media="' . esc_attr($media) . '"' : '';
 
+  // rel=preload で先に取得し、onloadで stylesheet に切替
+  // JS無効時は <noscript> でフォールバック
   return "<link rel=\"preload\" id=\"{$id}\" href=\"{$href}\" as=\"style\" onload=\"this.onload=null;this.rel='stylesheet'\"{$media}>\n"
     . "<noscript>{$orig}</noscript>\n";
 }, 10, 4);
+
 
 
 

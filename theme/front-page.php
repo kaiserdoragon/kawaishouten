@@ -194,7 +194,14 @@
             foreach ($my_posts as $post): setup_postdata($post); ?>
               <a href="<?php the_permalink(); ?>">
                 <h3>
-                  <?php the_title(); ?>
+                  <?php
+                  $title = get_the_title();
+                  $max   = 20;
+                  if (mb_strlen($title, 'UTF-8') > $max) {
+                    $title = mb_substr($title, 0, $max, 'UTF-8') . '';
+                  }
+                  echo esc_html($title);
+                  ?>
                 </h3>
                 <span class="top_info--time">
                   <?php the_time('Y年m月d日'); ?>
