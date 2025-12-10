@@ -56,6 +56,7 @@
               <p>e</p>
               <p>v</p>
               <p>e</p>
+              <p>.</p>
             </div>
           </h2>
           <img src="<?php echo get_template_directory_uri(); ?>/img/business/img_concept.jpg" alt="" width="658" height="612" class="business_concept--img_sp">
